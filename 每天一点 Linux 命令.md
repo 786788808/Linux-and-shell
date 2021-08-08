@@ -1,4 +1,7 @@
 ## Linux常用命令
+背景：  
+Linux 渣渣表示要好好学点命令，才能好好装B。    
+![](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F12070489956%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1631009983&t=ac346acc55d7a0dfaf99bbb1223d46f3)
 Linux是一个树形的文件系统结构，第一层目录：/ 。  
 在Linux中，一切皆文件。
 Linux命令格式：  
