@@ -90,14 +90,14 @@ e.g. 目录a里包含目录b，如果直接rmdir a,会报错，只有将子目�
 
 #### 9. cp命令
 copy的意思，将一个目录或者文件复制到另一个目录，也可实现将多个文件。    
-命令所在位置：/bin/cp    
-常用选项有-r, -p
-e.g. 
-(1)现/home/hush1目录下有ori_01和ori_02两个子目录，需要将其copy到/tmp目录下，见下图  
-加选项-r,代表递归的意思（recursive），通俗点就是，将文件夹下的所有子文件夹和文件打包，送到新的文件夹那里去  
-![image](https://user-images.githubusercontent.com/32427537/148677337-547ced71-6f0b-48da-9cad-6875bdc844bd.png)
-(2)加上-p，可以看到把时间和权限都一并复制过去 tmp 目录下了（**linux无文件创建时间，但是有最后操作时间，如果想要把原时间一并带走，一定要加-p参数**）
-![image](https://user-images.githubusercontent.com/32427537/148681243-d778c0e1-8739-4523-9123-f61736b5d62b.png)
+命令所在位置：/bin/cp      
+常用选项有:-r, -p    
+e.g.   
+(1)现/home/hush1目录下有ori_01和ori_02两个子目录，需要将其copy到/tmp目录下，见下图    
+加选项-r,代表递归的意思（recursive），通俗点就是，将文件夹下的所有子文件夹和文件打包，送到新的文件夹那里去    
+![image](https://user-images.githubusercontent.com/32427537/148677337-547ced71-6f0b-48da-9cad-6875bdc844bd.png)  
+(2)加上-p，可以看到把时间和权限都一并复制过去 tmp 目录下了（**linux无文件创建时间，但是有最后操作时间，如果想要把原时间一并带走，一定要加-p参数**）  
+![image](https://user-images.githubusercontent.com/32427537/148681243-d778c0e1-8739-4523-9123-f61736b5d62b.png)  
 
 
 
