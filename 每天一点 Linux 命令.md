@@ -46,15 +46,14 @@ e.g.:
 - cd ..，跳转到上一级目录
 
 #### 4. mkdir命令
-mkdir 即 make directory, 用于创建文件夹。  
+mkdir 即 make directory, 用于创建目录（or文件夹）。   
+命令所在位置：/bin/mkdir  
 可用选项：  
 -m: 对新建目录设置存取权限，也可以用 chmod 命令设置;
 -p: 沿着路径创建文件夹。路径中的某些目录可能不存在，没关系，加了-p，命令会自动帮你创建这一路的路径。
 
 e.g.:
-- mkdir dir_1，创建一个叫 dir_1 的文件夹  
-- mkdir test/test_1/test_2  
-假设我现在在 /c/Users/Administrator/Desktop/git_test 下，我想要创建一个全新的 test 文件夹下的 test_1下的 test_2 文件夹（原本不存在test、test_1、test_2）
+在tmp
 
 #### 5. touch命令
 touch，可用于创建新文件(创建单个或同时创建多个)，也可用于  
