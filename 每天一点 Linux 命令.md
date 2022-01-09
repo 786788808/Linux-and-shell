@@ -46,18 +46,18 @@ e.g.:
 - cd ..，跳转到上一级目录
 
 #### 4. mkdir命令
-mkdir 即 make directory, 用于创建目录（or文件夹）。   
-命令所在位置：/bin/mkdir  
-可用选项：  
--m: 对新建目录设置存取权限，也可以用 chmod 命令设置;
--p: 沿着路径创建文件夹。路径中的某些目录可能不存在，没关系，加了-p，命令会自动帮你创建这一路的路径。
+mkdir 即 make directory, 用于创建目录（or文件夹）。     
+命令所在位置：/bin/mkdir    
+可用选项：    
+-m: 对新建目录设置存取权限，也可以用 chmod 命令设置;  
+-p: 沿着路径创建文件夹。路径中的某些目录可能不存在，没关系，加了-p，命令会自动帮你创建这一路的路径。  
 
-e.g.:
-1）在tmp目录下，新建目录，如果目录本身不存在，记得加 -p 选项，否则报错    
-![](https://s3.bmp.ovh/imgs/2022/01/87b584d0c6cb6328.png)    
-2）同时创建多个目录，要在bin目录下创建test目录，而test目录还包含test01和test02目录，注意他们都是原先不存在的目录   
-Don't worry, Linux可以帮你做到    
-![](https://s3.bmp.ovh/imgs/2022/01/ea8948ebd92f6985.png)  
+e.g.:   
+1）在tmp目录下，新建目录，如果目录本身不存在，记得加 -p 选项，否则报错      
+![](https://s3.bmp.ovh/imgs/2022/01/87b584d0c6cb6328.png)      
+2）同时创建多个目录，要在bin目录下创建test目录，而test目录还包含test01和test02目录，注意他们都是原先不存在的目录     
+Don't worry, Linux可以帮你做到      
+![](https://s3.bmp.ovh/imgs/2022/01/ea8948ebd92f6985.png)    
 
 
 #### 5. touch命令
