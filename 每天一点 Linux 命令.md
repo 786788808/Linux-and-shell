@@ -91,6 +91,9 @@ e.g. 目录a里包含目录b，如果直接rmdir a,会报错，只有将子目�
 ![](https://s3.bmp.ovh/imgs/2022/01/783afcc6fcde86c1.png)
 
 #### 8. mv命令
+剪切，  
+e.g.,将a1.sh剪切到/tmp目录下， mv a1.sh /tmp  
+![image](https://user-images.githubusercontent.com/32427537/148682627-a313ad35-61e0-4153-944d-e92c9d052b4a.png)  
 
 
 #### 9. cp命令
