@@ -83,6 +83,7 @@ e.g.:
 - rm test4，这里的test4为一目录(文件夹)，无法直接删除，报错：rm: cannot remove 'test4': Is a directory。
 - rm -rf test4，如果你真的确定要删除test4这个文件夹里的所有东西，那么就执行这个，**慎用rm -rf**。
 - rm -i *.log，删除所有.log结尾的文件，但是删除前会逐一询问你是否删除，即inquiry。
+- rm -rf /,就是删除了整个系统，那就GG了。  
 
 #### 7. rmdir 命令
 命令所在路径:/bin/rmdir   
