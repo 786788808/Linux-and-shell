@@ -33,7 +33,7 @@ e.g. ls -lh
 第一列第一个字符，如果是小写字母d，即目录（文件夹）；如果是-（短横杠），即文件。  
 
 #### 2. pwd命令
-pwd 即 print workig directory，查看当前工作目录的绝对路径。
+pwd 即 print workig directory，查看当前工作目录的绝对路径。  
 
 #### 3. cd 命令
 cd 即 Change directory，切换目录  
@@ -82,7 +82,10 @@ e.g.:
 - rm -i *.log，删除所有.log结尾的文件，但是删除前会逐一询问你是否删除，即inquiry。
 
 #### 7. rmdir 命令
-该命令比较鸡肋，只能删除空的文件夹，暂时不管  
+命令所在路径:/bin/rmdir
+该命令比较鸡肋，只能**删除空的目录**，在实际应用里用得比较少
+e.g. 目录a里包含目录b，如果直接rmdir a,会报错，只有将子目录b删了，才能删a
+![](https://s3.bmp.ovh/imgs/2022/01/783afcc6fcde86c1.png)
 
 #### 8. mv命令
 
