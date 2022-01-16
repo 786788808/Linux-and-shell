@@ -13,23 +13,22 @@ Linux的Shell种类众多，常见的有：
 - **Bourne Again Shell（/bin/bash）**
 - C Shell（/usr/bin/csh）
 - K Shell（/usr/bin/ksh）
-- Shell for Root（/sbin/sh）
+- Shell for Root（/sbin/sh）  
 它们由不同的人或组织、实验室研发出来（各有优缺点，详情请google），我们常用的就是 Bourne Again Shell，缩写: bash .它是linux标准的默认shell ，它基于Bourne shell，吸收了C shell和Korn shell的一些特性。bash完全兼容sh，也就是说，用sh写的脚本可以不加修改的在bash中执行。  
-可通过以下命令查询自己的linux支持什么shell：cat ./etc/shells  
-输入vi /etc/shells，可看到linux支持什么shell    
-![image](https://user-images.githubusercontent.com/32427537/149654418-efd18470-1a82-4481-909f-de9330839140.png)   
-可通过echo $SHELL查看默认shell:  
-![image](https://user-images.githubusercontent.com/32427537/149655156-a37babc9-ac44-41af-902e-0e8a4d3659f7.png)  
+可通过以下命令查询自己的linux支持什么shell：cat ./etc/shells    
+![image](https://user-images.githubusercontent.com/32427537/149654418-efd18470-1a82-4481-909f-de9330839140.png)     
+可通过echo $SHELL查看默认shell: （这只是其中一种查看方式）     
+![image](https://user-images.githubusercontent.com/32427537/149655156-a37babc9-ac44-41af-902e-0e8a4d3659f7.png)    
 
-### 3.#!/bin/sh 表明解释器信息
-shell script第一行，常见：**#!/bin/sh** or **#!/bin/bash**  
-#! 是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行，即使用哪一种 Shell。沿着给定的路径去找就是了。（不懂的别纠结，学多几门语言就知道了）  
-e.g.我们已经在hush1目录下，有test_hello_world.sh了:  
-![image](https://user-images.githubusercontent.com/32427537/149659528-e47afc31-b373-4719-a83e-5eda944af7cb.png)  
-我们想要执行这份shell script,有两种方式执行脚本。  
-- 法1：./test_hello_world.sh
-- 法2：sh test_hello_world.sh
-![image](https://user-images.githubusercontent.com/32427537/149659714-96c6e627-936b-49c2-8192-3e735b6e14b1.png)
-法2sh，不需要在第一行指定解释器信息，写了也没用
+### 3.#!/bin/sh 表明解释器信息  
+shell script第一行，常见：**#!/bin/sh** or **#!/bin/bash**    
+#! 是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行，即使用哪一种 Shell。沿着给定的路径去找就是了。（不懂的别纠结，学多几门语言就知道了）    
+e.g.我们已经在hush1目录下，有test_hello_world.sh了:    
+![image](https://user-images.githubusercontent.com/32427537/149659528-e47afc31-b373-4719-a83e-5eda944af7cb.png)    
+我们想要执行这份shell script,有两种方式执行脚本。    
+- 法1：./test_hello_world.sh  
+- 法2：sh test_hello_world.sh  
+![image](https://user-images.githubusercontent.com/32427537/149659714-96c6e627-936b-49c2-8192-3e735b6e14b1.png)  
+法2sh，不需要在第一行指定解释器信息，写了也没用  
 
 ### 4.
