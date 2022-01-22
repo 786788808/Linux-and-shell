@@ -1,5 +1,6 @@
 ## Linux常用命令
 背景：  
+<font color=yellow>我是黄色</font>
 Linux 渣渣表示要好好学点命令，才能好好装B。:sunglasses:   
 ----
 Linux命令的基本格式：命令 [选项] [参数]（后面两个可选项的叫法可能不一样，注意就行）  
