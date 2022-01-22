@@ -21,7 +21,7 @@ Linux是一个树形的文件系统结构，第一层目录：/ ，根目录。
 快捷键介绍：  
 
 
-#### 1. ls命令
+#### 1. ls命令<table><tr><td bgcolor=green>背景色yellow</td></tr></table>
 ls即list缩写  
 可用选项：  
 ls -a 列出目录所有文件，包含以.开始的隐藏文件  
@@ -128,10 +128,11 @@ history | head -5,查看最前的5条命令
 history | tail -5,查看最后5条命令  
 !n, 比如用完history后，想重新执行第n条命令，可!n,执行第n行命令（平时脚本的路径太长，可以用这个就很快，当然也可以）  
 !! or !-1 or ctrl+P,直接执行最后一行的命令  
-export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命令的执行时间，如果想它一直都有执行时间显示，那么就必须到/etc/profile文件里，用vim去改啦
-history -c, 清除所有执行过的命令，最好不要乱动，否则会被组员打死  
+export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命令的执行时间，如果想它一直都有执行时间显示，那么就必须到/etc/profile文件里，用vim去改啦  
+history -c, 清除所有执行过的命令，最好不要乱动，否则会被组员打死    
 ![image](https://user-images.githubusercontent.com/32427537/150628851-fd969d1b-4e8b-4468-a9f4-4e11bdf040ef.png)
 ![image](https://user-images.githubusercontent.com/32427537/150628891-aa83272e-1f54-450e-a3ad-534afe1ef14d.png)
+还有很多功能，这里写这么多先  
 
 #### 11. cat命令
 #### 12. more命令
