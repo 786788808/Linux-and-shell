@@ -94,12 +94,12 @@ e.g.:
 e.g. 目录a里包含目录b，如果直接rmdir a,会报错，只有将子目录b删了，才能删a  
 ![](https://s3.bmp.ovh/imgs/2022/01/783afcc6fcde86c1.png)
 
-#### 8. mv命令
-可实现剪切，可实现改名 
-e.g.  
-（1)将a1.sh剪切到/tmp目录下， mv a1.sh /tmp  
-![image](https://user-images.githubusercontent.com/32427537/148682627-a313ad35-61e0-4153-944d-e92c9d052b4a.png)  
-(2)将a2.sh改名为a2_new.sh,可以理解为从原目录移走到原目录  mv a2.sh a2_new.sh  
+#### 8. mv命令  
+可实现剪切，可实现改名   
+e.g.    
+（1)将a1.sh剪切到/tmp目录下， mv a1.sh /tmp    
+![image](https://user-images.githubusercontent.com/32427537/148682627-a313ad35-61e0-4153-944d-e92c9d052b4a.png)    
+(2)将a2.sh改名为a2_new.sh,可以理解为从原目录移走到原目录  mv a2.sh a2_new.sh    
 ![image](https://user-images.githubusercontent.com/32427537/148683505-d6160d7b-b2e2-44b9-ac9e-54ae17b45c4c.png)
 
 
@@ -131,12 +131,14 @@ history | tail -5,查看最后5条命令
 export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命令的执行时间，如果想它一直都有执行时间显示，那么就必须到/etc/profile文件里，用vim去改啦  
 history -c, 清除所有执行过的命令，最好不要乱动，否则会被组员打死    
 ![image](https://user-images.githubusercontent.com/32427537/150628851-fd969d1b-4e8b-4468-a9f4-4e11bdf040ef.png)
-![image](https://user-images.githubusercontent.com/32427537/150628891-aa83272e-1f54-450e-a3ad-534afe1ef14d.png)
+![image](https://user-images.githubusercontent.com/32427537/150628891-aa83272e-1f54-450e-a3ad-534afe1ef14d.png)   
 还有很多功能，这里写这么多先  
 
 #### 11. cat命令
 #### 12. more命令
 #### 13. less命令
+相比上一条命令，less拥有更丰富的功能，不得不说一句：Less is more.  
+
 #### 14. head命令
 #### 15. tail命令
 #### 16. chmod命令
@@ -156,3 +158,10 @@ su 即 switch user，切换用户
 e.g.:  
 - which ls 
 - which which
+
+#### 21. alias命令
+直译，别名，可以看到哪些命令有别名。  
+比如ll，相当于ls -l了；vi 相当于vim。  
+![image](https://user-images.githubusercontent.com/32427537/150629377-c7fbffc7-efb6-4b49-9084-ece9601d3cc7.png)  
+
+
