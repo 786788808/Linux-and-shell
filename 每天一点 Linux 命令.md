@@ -21,7 +21,8 @@ Linux是一个树形的文件系统结构，第一层目录：/ ，根目录。
 快捷键介绍：  
 
 
-#### 1. ls命令<table><tr><td bgcolor=green>背景色yellow</td></tr></table>
+#### 1. ls命令  
+<table><tr><td bgcolor=green>背景色yellow</td></tr></table>
 ls即list缩写  
 可用选项：  
 ls -a 列出目录所有文件，包含以.开始的隐藏文件  
