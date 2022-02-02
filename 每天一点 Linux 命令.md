@@ -208,7 +208,7 @@ chown 需要超级用户 root 的权限才能执行此命令，就算是文件�
 示例：  
 (1)hush1用户在tmp目录里创建了C目录，想将其所有者改成root,  
 如果目录的创建者hush1想直接chown，`chown root C`, 是会报错的,    
-![image](https://user-images.githubusercontent.com/32427537/152187366-7c1e6f34-65bb-4fc7-909e-79ac0fa3db20.png)
+![image](https://user-images.githubusercontent.com/32427537/152187366-7c1e6f34-65bb-4fc7-909e-79ac0fa3db20.png)  
 在切换成root用户后，再尝试`chown root C`,    
 ![image](https://user-images.githubusercontent.com/32427537/152188162-68b2b286-fb04-4722-8236-833de8660347.png)  
 (2)假设负责写C目录的同事出差了，这时候要让新同事hush999来负责后面的代码，那就新增用户`useradd hush999`,  
