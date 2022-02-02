@@ -12,6 +12,7 @@
 ----
 Linux 是一个树形的文件系统结构，第一层目录：/ ，根目录。  
 在 Linux 中，**一切皆文件**。     
+root是超级用户。  
 
 ----
 - 快捷键介绍（实用得很，自己试试效果更佳）：  
@@ -46,7 +47,7 @@ ls即list缩写
 e.g. `ls -lh`    
 ![](https://s3.bmp.ovh/imgs/2022/01/b308bdbd4b796563.png)    
 可以从这里获取到很多信息：    
-第一列第一个字符，如果是小写字母d，即目录（文件夹）；如果是-（短横杠），即文件。    
+第一列第一个字符，如果是小写字母d，即目录；如果是-（短横杠），即文件。    
 
 ### 2. pwd命令
 `pwd` 即 print workig directory，查看当前工作目录的绝对路径。  
@@ -55,22 +56,22 @@ e.g. `ls -lh`
 切换目录，即 Change directory    
 e.g.:  
 - `cd /` ，跳转到根目录。
-- `cd sub_dir`, 到下一层sub_dir里面去了(联合pwd命令感受一下。)
+- `cd sub_dir`, 到下一层 sub_dir 里面去了(联合pwd命令感受一下。)
 - `cd ~`
     - cd ~ 是跳转到当前用户的家目录
-    - 如果是root用户，cd ~ 相当于 cd /root
-    - 如果是普通用户，cd ~ 相当于cd /home/当前用户名
+    - 如果是 root 用户，cd ~ 相当于 cd /root
+    - 如果是普通用户，cd ~ 相当于 cd /home/ 当前用户名
 - cd ..，跳转到上一级目录
 
 ### 4. mkdir命令
-mkdir 即 make directory, 用于创建目录（or文件夹）。     
+mkdir 即 make directory, 用于创建目录。     
 命令所在位置：/bin/mkdir    
 可用选项：    
 -m: 对新建目录设置存取权限，也可以用 chmod 命令设置;  
 -p: 沿着路径创建文件夹。路径中的某些目录可能不存在，没关系，加了-p，命令会自动帮你创建这一路的路径。  
 
 e.g.:   
-1）在tmp目录下，新建目录，如果目录本身不存在，记得加 -p 选项，否则报错      
+1）在 tmp 目录下，新建目录，如果目录本身不存在，记得加 -p 选项，否则报错。`mkdir -p test20220109/aa`,      
 ![](https://s3.bmp.ovh/imgs/2022/01/87b584d0c6cb6328.png)      
 2）同时创建多个目录，要在bin目录下创建test目录，而test目录还包含test01和test02目录，注意他们都是原先不存在的目录     
 Don't worry, Linux可以帮你做到      
@@ -94,22 +95,22 @@ rm 即 remove， 用于删除目录或者目录里的文件
 
 e.g.:  
 - `rm test4`，这里的test4为一目录(文件夹)，无法直接删除，报错：rm: cannot remove 'test4': Is a directory。
-- `rm -rf test4`，如果你真的确定要删除test4这个文件夹里的所有东西，那么就执行这个，**慎用rm -rf**。
-- `rm -i *.log`，删除所有.log结尾的文件，但是删除前会逐一询问你是否删除，即inquiry。
+- `rm -rf test4`，如果你真的确定要删除 test4 这个文件夹里的所有东西，那么就执行这个，**慎用rm -rf**。
+- `rm -i *.log`，删除所有.log 结尾的文件，但是删除前会逐一询问你是否删除，即 inquiry。
 - `rm -rf /`,就是删除了整个系统，那就**GG**了。  
 
 ### 7. rmdir 命令
 命令所在路径:/bin/rmdir   
 该命令比较鸡肋，只能**删除空的目录**，在实际应用里用得比较少  
-e.g. 目录a里包含目录b，如果直接rmdir a,会报错，只有将子目录b删了，才能删a  
+e.g. 目录a里包含目录b，如果直接 rmdir a,会报错，只有将子目录b删了，才能删a  
 ![](https://s3.bmp.ovh/imgs/2022/01/783afcc6fcde86c1.png)
 
 ### 8. mv命令  
 可实现剪切，可实现改名   
 e.g.    
-（1)将a1.sh剪切到/tmp目录下， mv a1.sh /tmp    
+（1)将a1.sh剪切到 /tmp 目录下， mv a1.sh /tmp    
 ![image](https://user-images.githubusercontent.com/32427537/148682627-a313ad35-61e0-4153-944d-e92c9d052b4a.png)    
-(2)将a2.sh改名为a2_new.sh,可以理解为从原目录移走到原目录  mv a2.sh a2_new.sh    
+(2)将 a2.sh 改名为 a2_new.sh,可以理解为从原目录移走到原目录  mv a2.sh a2_new.sh    
 ![image](https://user-images.githubusercontent.com/32427537/148683505-d6160d7b-b2e2-44b9-ac9e-54ae17b45c4c.png)
 
 
@@ -181,13 +182,19 @@ tail, 尾巴，用于显示文件里的最尾部的内容，平时用来看动�
 change mode, 修改用户对文件或目录的权限，即读写执行的权力  
 这里只简单记录一下数字版的，英文字母版的参考菜鸟 or else.  
 首先，要有用户的概念和读写执行的概念：    
-User（文件所有者）、Group（文件所有者所在组）、及Other（所有其他用户）      
+User（文件所有者）、Group（文件所有者所在组）、及 Other（所有其他用户）      
 数字代表的权限：r=4，w=2，x=1    
+可以单改一个文件或者目录，也可以改一个目录并且连带其下的所有目录及文件  
+
 示例：  
 `chmod 765 aaaa.sh`,     
 文件所有者的权限，7=4+2+1 ，即有读写执行的权限  
 用户组的权限， 6=4+2+0 ，即有读写的权限  
 其它用户的权限， 5=4+0+1 ，即有读和执行的权限
+
+假设我想修改/tmp/C这个目录的权限为777，并且想一并修改其目录下的目录及文件权限为777，那就加选项 `-R`,**大写R**  
+`chmod -R 777 /tmp/C`,    
+![image](https://user-images.githubusercontent.com/32427537/152122675-62e3fada-2e7d-4791-9731-35d6e49cf0ff.png)  
 
 在winscp里，操作更简单，直接勾选权力或者码数字。  
 
