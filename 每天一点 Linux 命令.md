@@ -149,11 +149,22 @@ export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命�
 还有很多功能，这里写这么多先  
 
 ### 11. cat命令
+cat（concatenate）命令用于连接文件并打印到标准输出设备上    
+
+
+
+
 ### 12. more命令
+
+
 ### 13. less命令
 相比上一条命令，less拥有更丰富的功能，不得不说一句：Less is more.  
 
 ### 14. head命令
+head 命令可用于查看文件的开头部分的内容，常用选项-n,自定义显示的行数  
+`head test01.log`, 默认显示开头10行的log    
+`head -n 100 test01.log`, 设置显示前100行的log    
+
 ### 15. tail命令
 tail, 尾巴，用于显示文件里的最尾部的内容，平时用来看动态log，看自己跑的job有没报错。      
 参数说明：    
@@ -167,7 +178,7 @@ tail, 尾巴，用于显示文件里的最尾部的内容，平时用来看动�
 `tail -n +888 test01.log`, 查看第888行到最后一行的log（就这个比较特殊一点，+号）    
 
 ### 16. chmod命令
-change mode, 修改用户对文件的权限，即读写执行的权力  
+change mode, 修改用户对文件或目录的权限，即读写执行的权力  
 这里只简单记录一下数字版的，英文字母版的参考菜鸟 or else.  
 首先，要有用户的概念和读写执行的概念：    
 User（文件所有者）、Group（文件所有者所在组）、及Other（所有其他用户）      
@@ -189,6 +200,7 @@ User（文件所有者）、Group（文件所有者所在组）、及Other（所
 `-k`, 区块为1024字节    
 `-l`, 只显示本地磁盘     
 `-T`, 列出文件系统类型    
+
 ### 18. su命令
 su 即 switch user，切换用户
 ### 19. find命令
@@ -198,9 +210,19 @@ e.g.:
 - which which
 
 ### 21. alias命令
-直译，别名。  
-`alias`,可以看到哪些命令有别名。    
-比如我自己的机子，默认的设置有：`ll`，相当于`ls -l`了；`vi` 相当于`vim`。    
-![image](https://user-images.githubusercontent.com/32427537/150629377-c7fbffc7-efb6-4b49-9084-ece9601d3cc7.png)  
+直译，别名，这是用来给linux命令起别名的命令（为了方便（偷懒））。但也只针对当前窗口，如果要永久生效，必须去文件设置。       
+`alias`, 可以看到哪些命令有别名，直接输入alias可看到自己机子默认设置了什么别名          
+`alias 别名='原命令 -选项/参数'`, 自定义指令的别名       
+`unalias 别名`, 删除别名    
+永久别名设置：  
+`vim /etc/profile`, 全局生效  
+`vim ~/.bashrc`, 当前用户生效  
+示例：   
+假设，设置 aa 作为 history 命令的别名：    
+![image](https://user-images.githubusercontent.com/32427537/152096056-4050a0ee-4561-4e87-9e9c-4e163ab7ab88.png)    
+![image](https://user-images.githubusercontent.com/32427537/152097239-60193fea-dec6-4139-ae09-5fd90954d11b.png)    
+
+
+
 
 
