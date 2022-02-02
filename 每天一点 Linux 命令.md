@@ -202,7 +202,18 @@ User（文件所有者）、Group（文件所有者所在组）、及 Other（�
 
 在winscp里，操作更简单，直接勾选权力或者码数字。  
 
-### 17. df命令
+### 17.chown
+change owner, 用于设置文件所有者和文件关联组的命令  
+chown 需要超级用户 root 的权限才能执行此命令，就算是文件所有者去修改，也只会报错  
+示例：  
+hush1用户在tmp目录里创建了C目录，想将其所有者改成root,  
+如果目录的创建者hush1想直接chown，`chown root C`, 是会报错的,    
+![image](https://user-images.githubusercontent.com/32427537/152187366-7c1e6f34-65bb-4fc7-909e-79ac0fa3db20.png)
+在切换成root用户后，再尝试`chown root C`,    
+![image](https://user-images.githubusercontent.com/32427537/152188162-68b2b286-fb04-4722-8236-833de8660347.png)
+
+
+### 18. df命令
 显示磁盘空间使用情况。获取硬盘被占用了多少空间，目前还剩下多少空间等信息，如果没有文件名被指定，则所有当前被挂载的文件系统的可用空间将被显示。默认情况下，磁盘空间将以 1KB 为单位进行显示，除非环境变量 POSIXLY_CORRECT 被指定，那样将以512字节为单位进行显示：
 可用选项：  
 `-a`, 全部文件系统列表    
@@ -212,16 +223,16 @@ User（文件所有者）、Group（文件所有者所在组）、及 Other（�
 `-l`, 只显示本地磁盘     
 `-T`, 列出文件系统类型    
 
-### 18. su命令
+### 19. su命令
 su 即 switch user，切换用户
 
-### 19. find命令
-### 20. which命令
+### 20. find命令
+### 21. which命令
 e.g.:  
 - which ls 
 - which which
 
-### 21. alias命令
+### 22. alias命令
 直译，别名，这是用来给linux命令起别名的命令（为了方便（偷懒））。但也只针对当前窗口，如果要永久生效，必须去文件设置。       
 `alias`, 可以看到哪些命令有别名，直接输入alias可看到自己机子默认设置了什么别名          
 `alias 别名='原命令 -选项/参数'`, 自定义指令的别名       
