@@ -184,6 +184,8 @@ change mode, 修改用户对文件或目录的权限，即读写执行的权力
 首先，要有用户的概念和读写执行的概念：    
 User（文件所有者）、Group（文件所有者所在组）、及 Other（所有其他用户）      
 数字代表的权限：r=4，w=2，x=1    
+![image](https://user-images.githubusercontent.com/32427537/152125246-c0dc287f-6eba-4fca-b1bd-d295f728cb9c.png)
+
 可以单改一个文件或者目录，也可以改一个目录并且连带其下的所有目录及文件  
 
 示例：  
