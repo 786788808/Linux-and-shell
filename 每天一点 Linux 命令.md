@@ -282,7 +282,13 @@ e.g.:
 ![image](https://user-images.githubusercontent.com/32427537/152313946-ad669553-15cd-4dd0-b371-76745cf28f95.png)    
  另外，可以了解一下 halt, poweroff, init 0, reboot, init 6.  
  
-  
+### 26.runlevel命令
+`runlevel`查看系统运行级别     
+`cat /etc/inittab`  
+
+### 27.logout命令
+`logout`, 让用户退出系统  
+
 
 
 
