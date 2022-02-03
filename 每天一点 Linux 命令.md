@@ -113,8 +113,6 @@ e.g.
 (2)将 a2.sh 改名为 a2_new.sh,可以理解为从原目录移走到原目录  mv a2.sh a2_new.sh    
 ![image](https://user-images.githubusercontent.com/32427537/148683505-d6160d7b-b2e2-44b9-ac9e-54ae17b45c4c.png)
 
-
-
 ### 9. cp命令
 copy的意思，可实现将一个目录或者文件复制到另一个目录，也可实现将多个目录、多个文件复制到另一个目录。    
 命令所在位置：/bin/cp      
@@ -133,8 +131,6 @@ e.g.
 ![image](https://user-images.githubusercontent.com/32427537/148677337-547ced71-6f0b-48da-9cad-6875bdc844bd.png)  
 (2)加上-p，可以看到把时间和权限都一并复制过去 tmp 目录下了（**linux无文件创建时间，但是有最后操作时间，如果想要把原时间一并带走，一定要加-p参数**）  
 ![image](https://user-images.githubusercontent.com/32427537/148681243-d778c0e1-8739-4523-9123-f61736b5d62b.png)  
-
-
 
 ### 10. history命令
 最简单的用法，就是拿来查看历史命令，看你之前敲了啥。直接输入 history。    
@@ -288,6 +284,17 @@ e.g.:
 
 ### 27.logout命令
 `logout`, 让用户退出系统  
+
+### 28.ping命令
+ `–c`, count 次数，也就是 ping 的次数  
+ `-i`, interval, 连接间隔   
+linux 下的 ping 和 windows 下的 ping 稍有区别, linux 下 ping 不会自动终止,需要按 ctrl+c 终止或者用参数 -c 指定要求完成的回应次数   
+示例：  
+`ping baidu.com`, ping 百度，如果连接上了，要手动终止 ctrl + c  
+`ping -c 10 -i 1 baidu.com`, ping 10 次，间隔 1 秒   
+
+
+
 
 
 
