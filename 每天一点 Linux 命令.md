@@ -223,7 +223,12 @@ change file group ownership, 用于改变文件或者目录的所属组。
 ![image](https://user-images.githubusercontent.com/32427537/152289489-e7f8ac07-751a-4f3f-8201-48ffe031ae96.png)
 
 ### 19. umask命令
-`umask -S`, 显示创建的目录和文件的默认权限
+`umask -S`, 显示创建的目录和文件的默认权限（以 rwx 的形式显示）     
+`umask`, 以数字方式查看掩码,  
+![image](https://user-images.githubusercontent.com/32427537/152300157-8dbf489f-6fc2-48db-8ea3-7964c7f8167f.png)
+我的显示0022，第一个0暂时不管，关注后三位的：022  
+默认权限要用 777-022=755，即 rwxrwxrwx-(----w--w-)=rwxr-xr-x(针对目录才是755，文件还要减去execute权限）    
+一般也不会去修改默认的权限  
 示例：    
 现自建目录 E 和文件 eeee,    
 ![image](https://user-images.githubusercontent.com/32427537/152294286-a0412da6-8ff2-4eaa-bcaa-142d6fae180a.png)     
@@ -243,6 +248,8 @@ change file group ownership, 用于改变文件或者目录的所属组。
 
 ### 21. su命令
 su 即 switch user，切换用户
+`su root`,切换成超级用户，接着输入密码，就可以切换成功了  
+
 
 ### 22. find命令
 ### 23. which命令
@@ -263,6 +270,21 @@ e.g.:
 ![image](https://user-images.githubusercontent.com/32427537/152096056-4050a0ee-4561-4e87-9e9c-4e163ab7ab88.png)      
 （2）删除别名：    
 ![image](https://user-images.githubusercontent.com/32427537/152097239-60193fea-dec6-4139-ae09-5fd90954d11b.png)      
+
+
+### 25. shutdown命令
+用于关机或重启的命令。早期，只有 shutdown 命令在关机或重启之前会正确地中止进程及服务这个命令相对其他关机命令，所以一般就选这个。现在随着 linux 的发展，比如 reboot 命令也会正确地中止进程及服务，但是仍建议使用 shutdown 来关机和重启。选最保险的就是了。        
+`shutdown -h now`, 立刻关机，自己的虚拟机可以试试，平时上班不要冲动      
+`shutdown -r now`, 立刻重启    
+`shutdown -h 10`, 10 分钟后关机    
+`shutdown -r 08:30`, 指定具体时间重启  
+一般人员也不会在生产中用到，毕竟是关机重启。    
+![image](https://user-images.githubusercontent.com/32427537/152313946-ad669553-15cd-4dd0-b371-76745cf28f95.png)    
+  
+
+只有 shutdown 命令在关机或重启之前会正确地中止进程及服务，所以我们一直认为 shutdown 才是最安全的关机与重启命令。
+
+而在现在的系统中，一些其他的命令（如 reboot）也会正确地中止进程及服务，但我们仍建议使用 shutdown 命令来进行关机和重启。
 
 
 
