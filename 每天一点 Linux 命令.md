@@ -280,11 +280,9 @@ e.g.:
 `shutdown -r 08:30`, 指定具体时间重启  
 一般人员也不会在生产中用到，毕竟是关机重启。    
 ![image](https://user-images.githubusercontent.com/32427537/152313946-ad669553-15cd-4dd0-b371-76745cf28f95.png)    
+ 另外，可以了解一下 halt, poweroff, init 0, reboot, init 6.  
+ 
   
-
-只有 shutdown 命令在关机或重启之前会正确地中止进程及服务，所以我们一直认为 shutdown 才是最安全的关机与重启命令。
-
-而在现在的系统中，一些其他的命令（如 reboot）也会正确地中止进程及服务，但我们仍建议使用 shutdown 命令来进行关机和重启。
 
 
 
