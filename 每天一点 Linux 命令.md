@@ -1,4 +1,4 @@
-## Linux常用命令
+## Linux常用命令:bowtie:
 
 ----
 - Linux 命令的基本格式：命令 [选项] [参数]  
@@ -15,7 +15,7 @@ Linux 是一个树形的文件系统结构，第一层目录：/ ，根目录。
 root是超级用户。  
 
 ----
-- 快捷键介绍（实用得很，自己试试效果更佳）：  
+- 快捷键介绍（实用得很，自己试试效果更佳）：:heart_eyes:  
     - Tab: 补全用 ，可实现命令或者是文件名的快速补全
     - ctrl+L or clear 命令: 清屏
     - ctrl+C: 中断正在执行的程序
@@ -41,7 +41,7 @@ ls即list缩写
 `ls -t` 以文件修改时间排序    
 `ls -S` 以文件大小排序    
 `ls -h` 以易读大小显示    
-`ls -l` l,是long的缩写。会详细地显示文件的权限、所有者、文件大小等信息    
+`ls -l` l,是 long 的缩写。会详细地显示文件的权限、所有者、文件大小等信息    
 `ls -d` 不会显示目录下的所有项目，只会显示你想要找的文件的详细信息，比如：ls -ld /dev    
 `ls -i` 类似于查身份证ID的操作    
 e.g. `ls -lh`    
@@ -102,7 +102,7 @@ e.g.:
 ### 7. rmdir 命令
 命令所在路径:/bin/rmdir   
 该命令比较鸡肋，只能**删除空的目录**，在实际应用里用得比较少  
-e.g. 目录a里包含目录b，如果直接 rmdir a,会报错，只有将子目录b删了，才能删a  
+e.g. 目录 a 里包含目录 b，如果直接 rmdir a,会报错，只有将子目录b删了，才能删a  
 ![](https://s3.bmp.ovh/imgs/2022/01/783afcc6fcde86c1.png)
 
 ### 8. mv命令  
@@ -123,12 +123,12 @@ copy的意思，可实现将一个目录或者文件复制到另一个目录，�
 `-p`，在复制的同时，可将源目录或者文件的时间、用户权限等设置一并带走复制   
 `-i`，在覆盖目标文件之前给出提示，要求用户确认是否覆盖，回答 y 时目标文件将被覆盖  
 
-还可以在复制的时候顺带改名，这里不详述，自行google答案  
+还可以在复制的时候顺带改名，这里不详述，自行 google 答案  
 命令参考：  
 `cp -r 源路径1 目标路径`   
 `cp 源路径1 源路径2 目标路径`    
 e.g.     
-(1)现/home/hush1目录下有ori_01和ori_02两个子目录，需要将其copy到/tmp目录下，见下图    
+(1)现 /home/hush1 目录下有 ori_01 和 ori_02 两个子目录，需要将其 copy 到 /tmp 目录下，见下图    
 加选项-r,代表递归的意思（recursive），通俗点就是，将文件夹下的所有子文件夹和文件打包，送到新的文件夹那里去    
 ![image](https://user-images.githubusercontent.com/32427537/148677337-547ced71-6f0b-48da-9cad-6875bdc844bd.png)  
 (2)加上-p，可以看到把时间和权限都一并复制过去 tmp 目录下了（**linux无文件创建时间，但是有最后操作时间，如果想要把原时间一并带走，一定要加-p参数**）  
@@ -137,11 +137,11 @@ e.g.
 
 
 ### 10. history命令
-最简单的用法，就是拿来查看历史命令，看你之前敲了啥。直接输入history。    
-`history n`, 可以输出最后n条命令，包含history n这一条命令   
-`history | head -5`,查看最前的5条命令  
-`history | tail -5`,查看最后5条命令  
-`!n`, 比如用完history命令后，想重新执行第n条命令，可!n,执行第n行命令（平时脚本的路径太长，可以用这个就很快，当然也可以）  
+最简单的用法，就是拿来查看历史命令，看你之前敲了啥。直接输入 history。    
+`history n`, 可以输出最后 n 条命令，包含history n这一条命令   
+`history | head -5`,查看最前的 5 条命令  
+`history | tail -5`,查看最后 5 条命令  
+`!n`, 比如用完 history 命令后，想重新执行第 n 条命令，可!n,执行第n行命令（平时脚本的路径太长，可以用这个就很快，当然也可以）  
 `!!` or `!-1` or ctrl+P,直接执行最后一行的命令（记住感叹号后面没有空格）    
 export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命令的执行时间，如果想它一直都有执行时间显示，那么就必须到/etc/profile文件里，用vim去改啦  
 `history -c`, 清除所有执行过的命令，最好不要乱动历史命令，否则会被组员打死    
@@ -163,8 +163,8 @@ cat（concatenate）命令用于连接文件并打印到标准输出设备上
 
 ### 14. head命令
 head 命令可用于查看文件的开头部分的内容，常用选项-n,自定义显示的行数  
-`head test01.log`, 默认显示开头10行的log    
-`head -n 100 test01.log`, 设置显示前100行的log    
+`head test01.log`, 默认显示开头 10 行的 log    
+`head -n 100 test01.log`, 设置显示前 100 行的 log    
 
 ### 15. tail命令
 tail, 尾巴，用于显示文件里的最尾部的内容，平时用来看动态log，看自己跑的job有没报错。      
@@ -173,10 +173,10 @@ tail, 尾巴，用于显示文件里的最尾部的内容，平时用来看动�
 `-n <行数>`, 显示文件的尾部 n 行内容或者从第 n 行开始到最后一行  
 示例：  
 `tail -f test01.log`, 动态查看 test01.log  
-`tail test01.log`, 默认看最后10行的log  
-`tail -n 888 test01.log`, 查看最后888行的log  
-`tail -n -888 test01.log`, 查看最后888行的log  
-`tail -n +888 test01.log`, 查看第888行到最后一行的log（就这个比较特殊一点，+号）    
+`tail test01.log`, 默认看最后 10 行的 log  
+`tail -n 888 test01.log`, 查看最后 888 行的 log  
+`tail -n -888 test01.log`, 查看最后 888 行的 log  
+`tail -n +888 test01.log`, 查看第 888 行到最后一行的 log（就这个比较特殊一点，+号）    
 
 ### 16. chmod命令
 change mode, 修改用户对文件或目录的权限，即读写执行的权力  
@@ -196,47 +196,53 @@ User（文件所有者）、Group（文件所有者所在组）、及 Other（�
 其它用户的权限， 5=4+0+1 ，即有读和执行的权限
 
 （2）修改一个目录或者文件的权限    
-具体需求：修改/tmp/C这个目录的权限为777，并且修改其目录下的目录及文件权限为777，那就加选项 `-R`,**大写R**    
+具体需求：修改 /tmp/C 这个目录的权限为 777，并且修改其目录下的目录及文件权限为 777，那就加选项 `-R`,**大写R**    
 `chmod -R 777 /tmp/C`,      
 ![image](https://user-images.githubusercontent.com/32427537/152122675-62e3fada-2e7d-4791-9731-35d6e49cf0ff.png)  
 
-在winscp里，操作更简单，直接勾选权力或者码数字。  
+在winscp里，操作更简单，直接勾选权限，爽的一匹:relieved:。  
 
 ### 17.chown
 change owner, 用于设置文件所有者和文件关联组的命令  
-chown 需要超级用户 root 的权限才能执行此命令，就算是文件所有者去修改，也只会报错  
+chown **需要超级用户 root 的权限才能执行此命令**，就算是文件所有者去修改，也只会报错  
 示例：  
-(1)hush1用户在tmp目录里创建了C目录，想将其所有者改成root,  
-如果目录的创建者hush1想直接chown，`chown root C`, 是会报错的,    
-![image](https://user-images.githubusercontent.com/32427537/152187366-7c1e6f34-65bb-4fc7-909e-79ac0fa3db20.png)  
-在切换成root用户后，再尝试`chown root C`,    
-![image](https://user-images.githubusercontent.com/32427537/152188162-68b2b286-fb04-4722-8236-833de8660347.png)  
-(2)假设负责写C目录的同事出差了，这时候要让新同事hush999来负责后面的代码，那就新增用户`useradd hush999`,  
-然后用`chown hush999 /tmp/C`  
-![image](https://user-images.githubusercontent.com/32427537/152208633-4545a545-c90c-454f-972e-61e5a54213bf.png)  
+现有文件 aa.txt,文件所有者为 hush1，hush1 出差了，想将剩下的脚本给 hush999 来完成  
+首先，要增加 hush999 这个用户,`useradd hush999`,    
+然后，`chown hush999 aa.txt`, 即可将 aa.txt 转交给 hush999 用户啦:smiling_imp:    
+![image](https://user-images.githubusercontent.com/32427537/152285754-2fd25717-9b5b-4ae4-b7c3-78805bad9686.png)  
 
+### 18. chgrp命令
+change file group ownership, 用于改变文件或者目录的所属组。  
+命令所在位置：/bin/chgrp  
+语法：chgrp [用户组] [目录或者文件]  
+语法与上面的 chown 类似   
+示例：  
+现有文件 aa.txt,文件所在组为 hush1，现想将组换成 hush_group,    
+首先，要增加 hush_group 这个组，`groupadd hush_group`,    
+然后，`chown hush999 aa.txt`, 即可将 aa.txt 转交给 hush999 用户啦:smiling_imp:   
+![image](https://user-images.githubusercontent.com/32427537/152289489-e7f8ac07-751a-4f3f-8201-48ffe031ae96.png)
 
-### 18. df命令
-显示磁盘空间使用情况。获取硬盘被占用了多少空间，目前还剩下多少空间等信息，如果没有文件名被指定，则所有当前被挂载的文件系统的可用空间将被显示。默认情况下，磁盘空间将以 1KB 为单位进行显示，除非环境变量 POSIXLY_CORRECT 被指定，那样将以512字节为单位进行显示：
+### 19. df命令
+显示磁盘空间使用情况。获取硬盘被占用了多少空间，目前还剩下多少空间等信息，如果没有文件名被指定，则所有当前被挂载的文件系统的可用空间将被显示。默认情况下，磁盘空间将以 1KB 为单位进行显示，除非环境变量 POSIXLY_CORRECT 被指定，那样将以 512 字节为单位进行显示：
 可用选项：  
 `-a`, 全部文件系统列表    
 `-h`, 以方便阅读的方式显示信息    
-`-i`, 显示inode信息    
-`-k`, 区块为1024字节    
+`-i`, 显示 inode 信息    
+`-k`, 区块为 1024 字节    
 `-l`, 只显示本地磁盘     
 `-T`, 列出文件系统类型    
 
-### 19. su命令
+### 20. su命令
 su 即 switch user，切换用户
 
-### 20. find命令
-### 21. which命令
+### 21. find命令
+### 22. which命令
 e.g.:  
 - which ls 
 - which which
 
-### 22. alias命令
-直译，别名，这是用来给linux命令起别名的命令（为了方便（偷懒））。但也只针对当前窗口，如果要永久生效，必须去文件设置。       
+### 23. alias命令
+直译，别名，这是用来给 linux 命令起别名的命令（为了方便（偷懒））。但也只针对当前窗口，如果要永久生效，必须去文件设置。       
 `alias`, 可以看到哪些命令有别名，直接输入alias可看到自己机子默认设置了什么别名          
 `alias 别名='原命令 -选项/参数'`, 自定义指令的别名       
 `unalias 别名`, 删除别名    
