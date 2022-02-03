@@ -6,7 +6,7 @@
     - 选项可以用来调整命令的功能，令结果以一定的方式显示。  
     - 参数即命令要处理/作用的对象。  
     - 命令**区分大小写**
-    - 选项有简洁版的：`ls -a`,也有完整版的 `ls --all`,但基本用简洁版，因为懒呀
+    - 选项有简洁版的：`ls -a`, 也有完整版的 `ls --all`, 但基本用简洁版，因为懒呀
     - 有的命令不一定遵守日常的命令格式，这里只是最普通的那种  
     
 ----
@@ -222,7 +222,16 @@ change file group ownership, 用于改变文件或者目录的所属组。
 然后，`chown hush999 aa.txt`, 即可将 aa.txt 转交给 hush999 用户啦:smiling_imp:   
 ![image](https://user-images.githubusercontent.com/32427537/152289489-e7f8ac07-751a-4f3f-8201-48ffe031ae96.png)
 
-### 19. df命令
+### 19. umask命令
+`umask -S`, 显示创建的目录和文件的默认权限
+示例：    
+现自建目录 E 和文件 eeee,    
+![image](https://user-images.githubusercontent.com/32427537/152294286-a0412da6-8ff2-4eaa-bcaa-142d6fae180a.png)     
+查询目录及文件默认的权限，`ls -ld E`, `ls -l eeee`,       
+![image](https://user-images.githubusercontent.com/32427537/152294943-6ffc5bcd-0270-4d33-9ad2-4ac1f6f7ad4d.png)    
+**touch一个文件，默认是不会有execute权限的，这点跟目录是不同的（想想病毒就知道why了）**
+
+### 20. df命令
 显示磁盘空间使用情况。获取硬盘被占用了多少空间，目前还剩下多少空间等信息，如果没有文件名被指定，则所有当前被挂载的文件系统的可用空间将被显示。默认情况下，磁盘空间将以 1KB 为单位进行显示，除非环境变量 POSIXLY_CORRECT 被指定，那样将以 512 字节为单位进行显示：
 可用选项：  
 `-a`, 全部文件系统列表    
@@ -232,16 +241,16 @@ change file group ownership, 用于改变文件或者目录的所属组。
 `-l`, 只显示本地磁盘     
 `-T`, 列出文件系统类型    
 
-### 20. su命令
+### 21. su命令
 su 即 switch user，切换用户
 
-### 21. find命令
-### 22. which命令
+### 22. find命令
+### 23. which命令
 e.g.:  
 - which ls 
 - which which
 
-### 23. alias命令
+### 24. alias命令
 直译，别名，这是用来给 linux 命令起别名的命令（为了方便（偷懒））。但也只针对当前窗口，如果要永久生效，必须去文件设置。       
 `alias`, 可以看到哪些命令有别名，直接输入alias可看到自己机子默认设置了什么别名          
 `alias 别名='原命令 -选项/参数'`, 自定义指令的别名       
