@@ -290,8 +290,23 @@ e.g.:
  `-i`, interval, 连接间隔   
 linux 下的 ping 和 windows 下的 ping 稍有区别, linux 下 ping 不会自动终止,需要按 ctrl+c 终止或者用参数 -c 指定要求完成的回应次数   
 示例：  
-`ping baidu.com`, ping 百度，如果连接上了，要手动终止 ctrl + c  
+`ping baidu.com`, ping 百度，如果连接上了，要手动终止 ctrl+c  
 `ping -c 10 -i 1 baidu.com`, ping 10 次，间隔 1 秒   
+
+### 29.last命令
+列出目前与过去登入系统的用户信息。所有用户都具有执行权限。    
+命令所在路径：/usr/bin/last   
+![image](https://user-images.githubusercontent.com/32427537/152552327-e4164802-0ec5-4676-b49b-0fa469935409.png)   
+
+### 30.lastlog命令
+列出每个用户最后登录的信息或者特定用户的上次登录信息。  
+`lastlog`, 列出所有用户的信息  
+`lastlog -u 123`， 只列出用户123上次登录的信息  
+![image](https://user-images.githubusercontent.com/32427537/152553904-821a5570-8b2e-4c44-9140-803ebad05c7b.png)   
+
+### 31.nmuti命令
+
+
 
 
 
