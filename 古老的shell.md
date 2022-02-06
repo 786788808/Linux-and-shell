@@ -1,4 +1,4 @@
-工作中常用到shell script实现调用，菜鸡mark here, 对自己学到的一些东西mark下来，以后好复习。   
+工作中常用到shell script实现调用，菜鸡mark here.        
 ### 1.什么是shell
 刚开始接触shell的时候，只知道shell脚本扩展名为 sh，其脚本还带有linux命令……脚本读起来有点困难，一脸问号   
 慢慢……知道了一点东西  
