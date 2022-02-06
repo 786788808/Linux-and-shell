@@ -354,7 +354,24 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 `passwd hush1`, 设置 hush1 用户的密码, enter后输入新密码（超级用户方式）  
 普通用户就直接`passwd`    
 
-### 40.
+### 40.usermod命令
+修改用户账号，更改用户的有关属性，如用户号、主目录、用户组、登录Shell等    
+针对已有的账户，上面的useradd是针对新用户  
+
+### 41.userdel命令
+删除用户，也可通过手动删除相关文件内容来删除某个用户，但是比较麻烦，看需求选        
+`userdel -r hush1`, 删除hush1用户，并且把家目录删掉，一般都带`-r`选项这样删才干净         
+
+### 42.ID命令
+`id hush1`, 查看hush1的ID号     
+![image](https://user-images.githubusercontent.com/32427537/152673789-c80f201e-6f5c-42a1-98e0-6e7dad693a97.png)     
+
+### 43.whoami命令
+用于显示自身用户名称    
+`whoami`,    
+![image](https://user-images.githubusercontent.com/32427537/152673842-83c23a5c-3920-4ab6-9da0-975b71192dff.png)  
+看到这命令不自觉想笑，啊哈哈哈哈
+
 
 
 
