@@ -372,6 +372,14 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 ![image](https://user-images.githubusercontent.com/32427537/152673842-83c23a5c-3920-4ab6-9da0-975b71192dff.png)  
 看到这命令不自觉想笑，啊哈哈哈哈
 
+### 44.su命令
+切换用户, switch user  
+以前一直直接用`su`去切换用户，最近再看视频教程的时候，发现，最好还是用`su -`吧，把环境变量也改了，不然可能带来一定问题    
+直接`su`的话，再用`env`查看环境变量，  
+![image](https://user-images.githubusercontent.com/32427537/152674342-bd2cfb50-e63f-49dc-a14a-efb432eb4c85.png)  
+如果`su -`的话，再用`env`查看环境变量，就是另一种景象（try try）   
+
+
 
 
 
