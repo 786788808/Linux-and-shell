@@ -35,4 +35,5 @@ e.g.我们已经在hush1目录下，有test_hello_world.sh了:
 ![image](https://user-images.githubusercontent.com/32427537/149659714-96c6e627-936b-49c2-8192-3e735b6e14b1.png)  
 法2sh，不需要在第一行指定解释器信息，写了也没用  
 
-### 4.
+### 4.变量
+### 5.输入输出重定向
