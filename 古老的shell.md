@@ -97,13 +97,20 @@ EOF`
 
 
 ### 10.判断
-按照文件类型进行判断：
+按照文件类型进行判断：  
  | 测试选项      | 作用     |
 | ---------- | :-----------:  |
 | `-d`     | 判断文件是否存在，并且是否为目录文件（是目录，则为真）     |
 | `-e`     | 判断文件是否存在，存在就为真     |
 | `-f`    | 判断该文件是否为真，是否为普通文件（是普通文件，则为真）     |
-两种判断格式：  
-`test -e etl_job.log`,判断 etl_job.log 这个文件是否存在  
-`[ -e etl_job.log ]`,判断 etl_job.log 这个文件是否存在(中括号两边一定要留空格)    
-by the way,这么写去判断是因为机器要拿来判断，不是我们人眼去ls,然后看文件是否存在，是什么文件类型  
+
+两种判断格式：    
+`test -e etl_job.log`,判断 etl_job.log 这个文件是否存在    
+`[ -e etl_job.log ]`,判断 etl_job.log 这个文件是否存在(中括号两边一定要留空格)      
+输出结果要用`$?`来看（上一条命令的执行结果），如果输出结果为0，就代表正确；输出结果非零，就代表错误  
+by the way,这么写去判断是因为机器要拿来判断，不是我们人眼去ls,然后看文件是否存在，是什么文件类型     
+示例：  
+![image](https://user-images.githubusercontent.com/32427537/156007257-e8e67354-f33c-445e-aa9e-3af0000da1e2.png)  
+![image](https://user-images.githubusercontent.com/32427537/156008312-167e366a-1a9c-4f45-b423-e1964a951708.png)  
+![image](https://user-images.githubusercontent.com/32427537/156009088-3c62efdb-1508-4a1f-84d6-ba736a222354.png)    
+  
