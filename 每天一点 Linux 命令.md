@@ -379,6 +379,9 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 ![image](https://user-images.githubusercontent.com/32427537/152674342-bd2cfb50-e63f-49dc-a14a-efb432eb4c85.png)  
 如果`su -`的话，再用`env`查看环境变量，就是另一种景象（try try）   
 
+### 45.screen
+
+### 46.tmux
 
 
 
