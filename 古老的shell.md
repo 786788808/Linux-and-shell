@@ -137,10 +137,22 @@ But,这里的判断不分文件拥有者、所属组还是其他所有者，只�
 ### 11.
 `$#`: 表示传入的参数数量,such as:sh hush_demo.sh batch01 tableAA vendorA, 跟随三个参数，即返回3.  
 `$@`: 表示传入的参数列表,such as:sh hush_demo.sh batch01 tableAA vendorA, 即返回batch01 tableAA vendorA  
-`for var in $@:
-do
-    echo "$var"
-done`
-`$?`:
-`$0`:
-`$1`:
+
+`for var in $@:`    
+`do`    
+`    echo "$var"`  
+`done`  
+
+`$?`: 表示最后命令的退出状态，0表示没有错误，其他表示有错误   
+`$0`: 表示要执行的shell脚本名称  
+`$1` `$2` `$3`… `$n` 类推:  表示传入到脚本中对应位置的参数，第1个参数值，第2个参数值，第3个参数值… 第n个参数值，类推  
+`$$`: 表示Shell本身的PID（ProcessID）  
+`$!`: 表示Shell最后运行的后台Process的PID  
+
+basename与dirname：  
+`shell_dir=$(cd `dirname $0`; pwd)`
+其中，
+dirname $0，获取当前脚本所在绝对目录 
+cd `dirname $0`，进入这个目录（切换当前工作目录） 
+pwd，显示切换后脚本所在的工作目录
+
