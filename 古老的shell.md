@@ -133,3 +133,14 @@ by the way,这么写去判断是因为机器要拿来判断，不是我们人眼
 
 But,这里的判断不分文件拥有者、所属组还是其他所有者，只要有一人有r，就会判定其拥有读权限，其他类推。如果要细致判断权限，则要写脚本去判定了。  
 ![image](https://user-images.githubusercontent.com/32427537/156021717-ee149314-b3ec-4908-bb19-68c36b24661a.png)
+
+### 11.
+`$#`: 表示传入的参数数量,such as:sh hush_demo.sh batch01 tableAA vendorA, 跟随三个参数，即返回3.  
+`$@`: 表示传入的参数列表,such as:sh hush_demo.sh batch01 tableAA vendorA, 即返回batch01 tableAA vendorA  
+`for var in $@:
+do
+    echo "$var"
+done`
+`$?`:
+`$0`:
+`$1`:
