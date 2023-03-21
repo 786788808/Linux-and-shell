@@ -149,10 +149,10 @@ But,这里的判断不分文件拥有者、所属组还是其他所有者，只�
 `$$`: 表示Shell本身的PID（ProcessID）  
 `$!`: 表示Shell最后运行的后台Process的PID  
 
-basename与dirname：  
-`shell_dir=$(cd `dirname $0`; pwd)`
-其中，
-dirname $0，获取当前脚本所在绝对目录 
-cd `dirname $0`，进入这个目录（切换当前工作目录） 
-pwd，显示切换后脚本所在的工作目录
+basename与dirname：    
+`shell_dir=$(cd `dirname $0`; pwd)`  
+其中，  
+dirname $0，获取当前脚本所在绝对目录   
+cd `dirname $0`，进入这个目录（切换当前工作目录）   
+pwd，显示切换后脚本所在的工作目录  
 
