@@ -1,5 +1,8 @@
-mark down ~ mark down ~  
-[在线测试工具(临时用下)](https://c.runoob.com/compile/18/)
+[在线测试工具(临时用下)](https://c.runoob.com/compile/18/)  
+参考文档，有更好的后续会update:  
+[参考文档1](https://shellscript.readthedocs.io/zh_CN/latest/index.html)  
+[参考文档2](https://www.gnu.org/software/bash/manual/bash.html)  
+[参考文档3](http://manual.51yip.com/shell/)
 
 ### 1.什么是shell
 刚开始接触shell的时候，只知道shell脚本扩展名为 sh，其脚本还带有linux命令……脚本读起来有点困难，一脸问号   
@@ -166,8 +169,26 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 `echo ${line_num[0]}`
 
 (2) 输出所有数组元素
+两种写法，任君选择
 `echo ${line_num[@]}`
-`echo ${height[@]}`
+`echo ${height[*]}`
 
-(2) 增加元素
-line_num[]=
+(3) 增加元素
+`line_num[4]=55`
+`echo ${line_num[*]}`
+
+(4) 修改元素
+`line_num[0]=555`
+`echo ${line_num[*]}`
+
+(5)稀疏数组
+元素不一定是连续的
+写法1：
+`weight[0]=66`
+`weight[5]=666`
+`weight[10]=6666`
+`echo ${weight[*]}`
+
+写法2：
+`ages=([3]=18 [5]=19 [10]=22)`
+`echo ${ages[*]}`
