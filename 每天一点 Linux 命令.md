@@ -37,6 +37,7 @@ shell 有很多种，而你的Linux机有多少种可以使用的shells呢？
 当前用户默认使用的是什么shell呢？    
 直接`vi /etc/passwd`,找到你的account，对应最右侧的shell，即是答案      
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/f2310937-3847-43c0-886b-76e66d142036)  
+每种shell的语法都不同，比如，我们没有设置变量`var1`,然后我们在bash里，直接 `echo ${var1}`,只会显示空值。But，如果在其他shell，会恭喜你，收获报错。注意。  
 
 ----
 
