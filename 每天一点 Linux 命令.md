@@ -57,7 +57,7 @@ e.g. `ls -lh`
 e.g.:  
 - `cd /` ，跳转到根目录。
 - `cd sub_dir`, 到下一层 sub_dir 里面去了(联合pwd命令感受一下。)
-- `cd ~`
+- `cd ~`,`cd`
     - cd ~ 是跳转到当前用户的家目录
     - 如果是 root 用户，cd ~ 相当于 cd /root
     - 如果是普通用户，cd ~ 相当于 cd /home/ 当前用户名
@@ -115,6 +115,7 @@ e.g.
 
 ### 9. cp命令
 copy的意思，可实现将一个目录或者文件复制到另一个目录，也可实现将多个目录、多个文件复制到另一个目录。    
+不同用户用cp command出来的效果不一样，文件的权限及属性都因人而异，如果是复制给其他用户使用，要注意别人能不能用到。  
 命令所在位置：/bin/cp      
 常用选项说明:  
 `-r`，递归将原目录或文件全部打包带走，**复制目录的时候一定要带上**，即使目录里没东西    
@@ -382,6 +383,22 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 ### 45.screen
 
 ### 46.tmux
+
+### 47.type
+查询命令是否为builtin command, `type [-tpa] name
+`type ls`  
+不加任何参数时，会显示出要查询的命令为外部命令还是bash内置命令  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/33c254b8-2a82-4280-a835-571be8b74e0d)    
+`type -a ls`   
+会由PATH变量定义的路径中，将所有含name的命令都列出来，参考此例子  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/bc0b32e9-4a3e-4c5a-823b-2856b9810514)    
+`type -t ls`   
+`type -t history`  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/362c2b8b-1111-4a83-9e6a-956dcd2ccbdd)   
+
+
+
+
 
 
 
