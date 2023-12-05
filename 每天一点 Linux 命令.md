@@ -29,8 +29,17 @@ Linux 是一个树形的文件系统结构，第一层目录：/ ，根目录。
     - Esc+F: 移动到当前单词的结尾（移词尾）     
     - Ctrl+W: 针对当前词，删掉光标以前的字符；如果放到词的最后一位的再后一位的空格上，就相当于删掉一个单词（删单词）  
     - Ctrl+Y: 粘贴使用 Ctrl+W，Ctrl+U 和 Ctrl+K 快捷键擦除的文本
+----
 
------------------
+shell 有很多种，而你的Linux机有多少种可以使用的shells呢？  
+直接`vi /etc/shells`，即可看到。而Linux 默认使用Bash       
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/833589d0-3f79-4334-b5ff-da534517968b)  
+当前用户默认使用的是什么shell呢？    
+直接`vi /etc/passwd`,找到你的account，对应最右侧的shell，即是答案      
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/f2310937-3847-43c0-886b-76e66d142036)  
+
+----
+
 
 ### 1. ls命令  
 ls即list缩写  
