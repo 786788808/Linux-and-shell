@@ -385,9 +385,9 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 ### 46.tmux
 
 ### 47.type
-查询命令是否为builtin command, `type [-tpa] name
-`type ls`  
-不加任何参数时，会显示出要查询的命令为外部命令还是bash内置命令  
+查询命令是否为builtin command, `type [-tpa] name  
+`type ls`    
+不加任何参数时，会显示出要查询的命令为外部命令还是bash内置命令    
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/33c254b8-2a82-4280-a835-571be8b74e0d)    
 `type -a ls`   
 会由PATH变量定义的路径中，将所有含name的命令都列出来，参考此例子  
