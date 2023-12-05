@@ -394,6 +394,10 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/bc0b32e9-4a3e-4c5a-823b-2856b9810514)    
 `type -t ls`   
 `type -t history`  
+type -t会显示三种结果:  
+file：表示command为外部命令  
+alias:表示该命令为命令别名所设置的名称，比如`ls`  
+builtin:表示该命令为bash内置的命令  
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/362c2b8b-1111-4a83-9e6a-956dcd2ccbdd)   
 
 
