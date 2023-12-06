@@ -158,10 +158,17 @@ export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命�
 
 ### 11. cat (concatenate)
 cat（concatenate）命令用于连接文件并打印到标准输出设备上,简单点，就是把文件的内容连续输出到屏幕上，如果是查看大文件，用其他command吧     
+`cat [-AbEnTv]`
+选项与参数：  
+-A：相当于-vET的整合选项，可列出一些特殊字符而不是空白  
+-b: 列出行号，空白行不会显示行号，会跳过，与`-n`不同
+-E: 将结尾的换行符`$`显示出来（Windows的换行符是`M$`)      
+-n: 打印出空白行，连空白行都会显示行号，与`-b`选项不同，拿个文件cat一下就知道了  
+-T：将`[Tab]`键以`^I`显示出来  
+-V：列出一些看不见的特殊字符  
 
-
-
-
+`cat -A aaaa.txt`:   
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/2eb46666-6656-4a46-bf77-5af9037a4591)
 
 ### 12. more命令
 
