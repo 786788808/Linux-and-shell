@@ -42,7 +42,7 @@ shell 有很多种，而你的Linux机有多少种可以使用的shells呢？
 ----
 
 
-### 1. ls命令  
+### 1. ls  
 ls即list缩写  
 可用选项：    
 `ls -a` 列出目录所有文件，包含以.开始的隐藏文件    
@@ -59,10 +59,10 @@ e.g. `ls -lh`
 可以从这里获取到很多信息：    
 第一列第一个字符，如果是小写字母d，即目录；如果是-（短横杠），即文件。    
 
-### 2. pwd命令
+### 2. pwd
 `pwd` 即 print workig directory，查看当前工作目录的绝对路径。  
 
-### 3. cd 命令
+### 3. cd 
 切换目录，即 Change directory    
 e.g.:  
 - `cd /` ，跳转到根目录。
@@ -73,7 +73,7 @@ e.g.:
     - 如果是普通用户，cd ~ 相当于 cd /home/ 当前用户名
 - cd ..，跳转到上一级目录
 
-### 4. mkdir命令
+### 4. mkdir
 mkdir 即 make directory, 用于创建目录。     
 命令所在位置：/bin/mkdir    
 可用选项：    
@@ -88,7 +88,7 @@ Don't worry, Linux可以帮你做到
 ![](https://s3.bmp.ovh/imgs/2022/01/ea8948ebd92f6985.png)    
 
 
-### 5. touch命令
+### 5. touch
 touch，可用于创建新文件(创建单个或同时创建多个)，也可用于  
 
 e.g.:
@@ -96,7 +96,7 @@ e.g.:
 - `touch y2.txt y3.txt y4.txt`，同时创建y2.txt, y3.txt, y4.txt
 -
 
-### 6. rm命令
+### 6. rm
 rm 即 remove， 用于删除目录或者目录里的文件  
 可用选项：  
 -i： 删除前逐一询问确认    
@@ -109,13 +109,13 @@ e.g.:
 - `rm -i *.log`，删除所有.log 结尾的文件，但是删除前会逐一询问你是否删除，即 inquiry。
 - `rm -rf /`,就是删除了整个系统，那就**GG**了。  
 
-### 7. rmdir 命令
+### 7. rmdir 
 命令所在路径:/bin/rmdir   
 该命令比较鸡肋，只能**删除空的目录**，在实际应用里用得比较少  
 e.g. 目录 a 里包含目录 b，如果直接 rmdir a,会报错，只有将子目录b删了，才能删a  
 ![](https://s3.bmp.ovh/imgs/2022/01/783afcc6fcde86c1.png)
 
-### 8. mv命令  
+### 8. mv 
 可实现剪切，可实现改名   
 e.g.    
 （1)将a1.sh剪切到 /tmp 目录下， mv a1.sh /tmp    
@@ -143,7 +143,7 @@ e.g.
 (2)加上-p，可以看到把时间和权限都一并复制过去 tmp 目录下了（**linux无文件创建时间，但是有最后操作时间，如果想要把原时间一并带走，一定要加-p参数**）  
 ![image](https://user-images.githubusercontent.com/32427537/148681243-d778c0e1-8739-4523-9123-f61736b5d62b.png)  
 
-### 10. history命令
+### 10. history
 最简单的用法，就是拿来查看历史命令，看你之前敲了啥。直接输入 history。    
 `history n`, 可以输出最后 n 条命令，包含history n这一条命令   
 `history | head -5`,查看最前的 5 条命令  
@@ -170,18 +170,18 @@ cat（concatenate）命令用于连接文件并打印到标准输出设备上,�
 `cat -A aaaa.txt`:   
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/2eb46666-6656-4a46-bf77-5af9037a4591)
 
-### 12. more命令
+### 12. more
 
 
-### 13. less命令
+### 13. less
 相比上一条命令，less拥有更丰富的功能，不得不说一句：Less is more.  
 
-### 14. head命令
+### 14. head
 head 命令可用于查看文件的开头部分的内容，常用选项-n,自定义显示的行数  
 `head test01.log`, 默认显示开头 10 行的 log    
 `head -n 100 test01.log`, 设置显示前 100 行的 log    
 
-### 15. tail命令
+### 15. tail
 tail, 尾巴，用于显示文件里的最尾部的内容，平时用来看动态log，看自己跑的job有没报错。      
 参数说明：    
 `-f`, 循环读取
@@ -193,7 +193,7 @@ tail, 尾巴，用于显示文件里的最尾部的内容，平时用来看动�
 `tail -n -888 test01.log`, 查看最后 888 行的 log  
 `tail -n +888 test01.log`, 查看第 888 行到最后一行的 log（就这个比较特殊一点，+号）    
 
-### 16. chmod命令
+### 16. chmod
 change mode, 修改用户对文件或目录的权限，即读写执行的权力  
 这里只简单记录一下数字版的，英文字母版的参考菜鸟 or else.  
 首先，要有用户的概念和读写执行的概念：    
@@ -226,7 +226,7 @@ chown **需要超级用户 root 的权限才能执行此命令**，就算是文�
 然后，`chown hush999 aa.txt`, 即可将 aa.txt 转交给 hush999 用户啦:smiling_imp:    
 ![image](https://user-images.githubusercontent.com/32427537/152285754-2fd25717-9b5b-4ae4-b7c3-78805bad9686.png)  
 
-### 18. chgrp命令
+### 18. chgrp
 change file group ownership, 用于改变文件或者目录的所属组。  
 命令所在位置：/bin/chgrp  
 语法：chgrp [用户组] [目录或者文件]  
@@ -237,7 +237,7 @@ change file group ownership, 用于改变文件或者目录的所属组。
 然后，`chown hush999 aa.txt`, 即可将 aa.txt 转交给 hush999 用户啦:smiling_imp:   
 ![image](https://user-images.githubusercontent.com/32427537/152289489-e7f8ac07-751a-4f3f-8201-48ffe031ae96.png)
 
-### 19. umask命令
+### 19. umask
 `umask -S`, 显示创建的目录和文件的默认权限（以 rwx 的形式显示）     
 `umask`, 以数字方式查看掩码,  
 ![image](https://user-images.githubusercontent.com/32427537/152300157-8dbf489f-6fc2-48db-8ea3-7964c7f8167f.png)
@@ -251,7 +251,7 @@ change file group ownership, 用于改变文件或者目录的所属组。
 ![image](https://user-images.githubusercontent.com/32427537/152294943-6ffc5bcd-0270-4d33-9ad2-4ac1f6f7ad4d.png)    
 **touch一个文件，默认是不会有execute权限的，这点跟目录是不同的（想想病毒就知道why了）**
 
-### 20. df命令
+### 20. df
 显示磁盘空间使用情况。获取硬盘被占用了多少空间，目前还剩下多少空间等信息，如果没有文件名被指定，则所有当前被挂载的文件系统的可用空间将被显示。默认情况下，磁盘空间将以 1KB 为单位进行显示，除非环境变量 POSIXLY_CORRECT 被指定，那样将以 512 字节为单位进行显示：
 可用选项：  
 `-a`, 全部文件系统列表    
@@ -423,7 +423,7 @@ e.g.:
 - which ls 
 - which which
 
-
+### 48. which
 
 
 
