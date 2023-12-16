@@ -423,7 +423,21 @@ e.g.:
 - which ls 
 - which which
 
-### 48. which
+### 49.dos2unix, unix2dos
+DOS 和 Linux 的换行符不同，可以通过`cat -A filexxx` 来查看,不建议在 DOS 编辑完文件，再上传到 Linux 系统，这有可能引致错误。这时用`dos2unix`转换一下，就可以很快转换过来，不用手动一个一个替换（可能要先安装一下，自行百度）  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/26516b3e-8f5d-480c-8154-e8ecfb91c9d0)  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/631fd00b-18d0-49bb-af10-d5c1fe302bbe)  
+`unix2dos aaaa_copy.txt`  
+`cat -A aaaa_copy.txt`  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/98be5ae0-37b7-4fef-8a2f-6cbed1fff4f5)  
+在转换过后，可以发现它们的 filesize 不同，因为 DOS 占位比较多啊   
+如果是大文件，别`cat`了，直接`file aaaa*.txt`(忽略 aaaaa.txt 这个文件，暂时没用到）  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/22d860fa-de83-46ba-ba03-b9665d4e0b03)  
+
+选项和参数：  
+-k: 保留文件原有的mtime时间格式（不更新文件上次内容经过自定义的时间）    
+-n: 保留原来的文件，将转换后的内容输出到新文件    
+`dos2unix -n aa.txt aa_new2.txt`
 
 
 
