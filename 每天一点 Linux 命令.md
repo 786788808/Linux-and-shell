@@ -144,17 +144,30 @@ e.g.
 ![image](https://user-images.githubusercontent.com/32427537/148681243-d778c0e1-8739-4523-9123-f61736b5d62b.png)  
 
 ### 10. history
-最简单的用法，就是拿来查看历史命令，看你之前敲了啥。直接输入 history。    
-`history n`, 可以输出最后 n 条命令，包含history n这一条命令   
+最简单的用法，就是拿来查看历史命令，看你之前敲了啥。直接输入 history。history 显示的是当前内存内的所有history记录      
+`history n`, 可以输出最后 n 条命令，包含`history n`这一条命令， 比如`history 20`,会包含19条历史命令+1条`history 20`命令  
 `history | head -5`,查看最前的 5 条命令  
 `history | tail -5`,查看最后 5 条命令  
 `!n`, 比如用完 history 命令后，想重新执行第 n 条命令，可!n,执行第n行命令（平时脚本的路径太长，可以用这个就很快，当然也可以）  
-`!!` or `!-1` or ctrl+P,直接执行最后一行的命令（记住感叹号后面没有空格）    
-export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命令的执行时间，如果想它一直都有执行时间显示，那么就必须到/etc/profile文件里，用vim去改啦  
+`!!` or `!-1` or ctrl+P,或者直接上方向键并回车执行,就直接执行最后一行的命令（记住感叹号后面没有空格）    
+export HISTTIMEFORMAT='%F %T'，可设置**当前窗口**的 history 输出命令的执行时间
+![image](https://user-images.githubusercontent.com/32427537/150628851-fd969d1b-4e8b-4468-a9f4-4e11bdf040ef.png)    
+如果是要永久添加时间，vim ~/.bashrc # 在最下面加入：HISTTIMEFORMAT='%F %T '，再执行source ~/.bashrc    
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/d36246c6-83f8-4014-902f-ff76e8736063)  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/32e42b18-0808-4ba1-b22f-bde87e3fc9cd)  
+
 `history -c`, 清除所有执行过的命令，最好不要乱动历史命令，否则会被组员打死    
-![image](https://user-images.githubusercontent.com/32427537/150628851-fd969d1b-4e8b-4468-a9f4-4e11bdf040ef.png)
 ![image](https://user-images.githubusercontent.com/32427537/150628891-aa83272e-1f54-450e-a3ad-534afe1ef14d.png)   
-还有很多功能，这里写这么多先  
+HISTSIZE, 这个变量的值，表示在内存中，历史命令存储的数量  
+`echo ${HISTSIZE}`:  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/aaa1d470-1d39-48a2-8c4d-6d45c0fefe92)  
+如果我们对A同事在系统上执行的命令感兴趣，可以用root身份，去看看同事A的家目录下的`.bash_history` 文件  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/02478ab9-84a7-4b6a-8e16-eeac99cd128b)
+环境变量 HISTCONTROL 可以控制历史命令的记录方式。  
+我的`HISTCONTROL`设置了`ignoredups`，有什么用呢？比如我连续输入了3个`pwd`，设置`ignoredups`后，可以发现`history`只会记录一个`pwd` 命令，而不会三个一样的`pwd`出现。还可以设置ignorespace，因为不希望有些秘密命令被别人看见，我们在命令前插入空格，它就不会出现在历史命令中了。  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/4bf5ed20-010f-4cda-8f2f-75adfab8ea90)
+
+对于一些不希望被记录的命令,想要在history里删除某些命令，实时记录命令，而不是在不同session里，同一个用户看到的历史命令不同，这些都可以设置，后面再补。
 
 ### 11. cat (concatenate)
 cat（concatenate）命令用于连接文件并打印到标准输出设备上,简单点，就是把文件的内容连续输出到屏幕上，如果是查看大文件，用其他command吧     
