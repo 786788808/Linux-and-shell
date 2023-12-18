@@ -207,3 +207,11 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 - `$`: 美元符号也是个变量，表示本SHELL的进程ID，即PID。可以 `echo $$`试试。  
 - `?`: 这个就很常用啦，这个变量是上一个执行命令的返回值，0代表上一个命令成功执行，非0就是上一个命令执行失败
 -  
+### 14 read
+实现与用户交互，可以读取来自键盘输入的变量，比如，我们经常可以看到输入Y,N这种case    
+可以直接 `read 变量名`, 也可以 加`-p`,这个会有提示字符出现，用户用起来比较友好。也可以设置`-t` ,比如接60，表示我给你60秒输入    
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/38eff00f-fe4b-4f52-b456-8506abf50a9a)  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/dd330b0e-ce6f-43ea-8b9a-d87082156f43)  
+如果用户超时不输入值，那么就自动退出了，手动再见啦~      
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/29fd466d-f766-4f6f-a3b7-525da2e26d14)
+
