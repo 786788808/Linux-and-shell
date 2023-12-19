@@ -74,7 +74,8 @@ e.g.我们已经在hush1目录下，有test_hello_world.sh了:
 
 `&>file`  意思是把标准输出 和 标准错误输出 都重定向到文件file中  
 
-/dev/null是一个文件，这个文件比较特殊，所有传给它的东西它都丢弃掉。当我们想执行命令，但又不想在屏幕看到相关信息，那就指导这个null文件，perfect…    
+/dev/null是一个文件，这个文件比较特殊，所有传给它的东西它都丢弃掉。当我们想执行命令，但又不想在屏幕看到相关信息，那就指到这个null文件，perfect…  
+实操一下：    
 把`stdout` 和`stderr` 分别存到不同的文件   
 `find /home -name .bashrc > ./test_right 2> ./test_wrong`    
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/bee2b3fb-5abd-4dd7-a630-3ab3577fa3e0)     
