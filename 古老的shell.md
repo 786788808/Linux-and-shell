@@ -75,15 +75,21 @@ e.g.我们已经在hush1目录下，有test_hello_world.sh了:
 `&>file`  意思是把标准输出 和 标准错误输出 都重定向到文件file中  
 
 /dev/null是一个文件，这个文件比较特殊，所有传给它的东西它都丢弃掉。当我们想执行命令，但又不想在屏幕看到相关信息，那就指导这个null文件，perfect…    
-吧stdout 和stderr 分别存到不同的文件  
-`find /home -name .bashrc > ./test_right 2> ./test_wrong`  
-![image](https://github.com/786788808/Linux-and-shell/assets/32427537/bee2b3fb-5abd-4dd7-a630-3ab3577fa3e0)   
-跟上面的对比一下,这里没有把标准错误输出写入文件，就会在屏幕显示出来      
-`find /home -name .bashrc > ./test_right02`  
-![image](https://github.com/786788808/Linux-and-shell/assets/32427537/c5543b24-ae85-4d9c-b542-2195279ba857)
-
-
-
+把`stdout` 和`stderr` 分别存到不同的文件   
+`find /home -name .bashrc > ./test_right 2> ./test_wrong`    
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/bee2b3fb-5abd-4dd7-a630-3ab3577fa3e0)     
+跟上面的对比一下,这里没有把标准错误输出写入文件，就会在屏幕显示出来        
+`find /home -name .bashrc > ./test_right02`    
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/c5543b24-ae85-4d9c-b542-2195279ba857)  
+来看`/dev/null`,假设我只想看在屏幕上看到正确的信息，错误信息一律不想看，    
+那就扔进黑洞里，`find /home -name .bashrc 2> /dev/null`，这里只有stdout, stderr被外星人带走不见了     
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/dbe37653-7c65-48b0-b0e6-5661f4b24c7b)  
+再来另一个，`2>&1`，如果我想将stdout, stderr都写入同一个文件merge_log   
+`find /home -name .bashrc > merge_log 2>&1`    
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/a71b38d5-27d1-426c-b194-1f2f1bc689e1)     
+`find /home -name .bashrc &> merge_log_02`    
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/87d1c58c-59a4-41c9-b195-3e87d41bf649)   
+上面的两种写法，二选一，不要写成`find /home -name .bashrc > merge_log 2> merge_log`，我劝你善良，记住上面的两个就好了     
 
 ### 6.多命令顺序执行
  | 多命令执行符      | 格式     | 作用     |
