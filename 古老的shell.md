@@ -99,6 +99,12 @@ e.g.我们已经在hush1目录下，有test_hello_world.sh了:
 |  &&    | 命令1 && 命令2     |  逻辑与，当命令1正确执行，则命令2才会执行；当命令1执行不正确，命令2也不会执行     | 
 |  ||    | 命令1 || 命令2     |  逻辑或，当命令1正确执行，命令2不会执行；当命令1执行不正确，命令2才会执行     |
 
+比如，关机前，我想先跑两次`sync`再跑`shutdown`, `sync; sync; shutdown -h now`, 前一个命令是否成功执行，与后一个命令是否要执行是无关的。不管死活类型。    
+假设，我想判断/tmp/hush_dir 是否存在，如果存在就输出exist,不存在就输出not_exist  
+`ls /tmp/hush_dir && echo "exist" || echo "not_exist"`  
+![image](https://github.com/786788808/Linux-and-shell/assets/32427537/bac141cb-73ea-4287-8516-df72ded8abcf)
+记住`command1 && command2 || command3`,顺序通常不会变，command2 and command3 会使用肯定可以执行成功的命令  
+
 ### 7.注释
 单行注释，用经典的`#`开头  
 多行注释，可以用多个`#`，也可以直接选用多行注释：    
