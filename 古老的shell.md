@@ -291,3 +291,25 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 `last | cut -d ' ' -f1 | sort | uniq -c`   
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/2e2ea618-eda4-4352-b3df-584936e46188)   
 
+### 19 wc
+
+### 20 tee 双重冲定向
+
+### 21 tr
+可以用来删除一段信息中的文字，或者进行文字信息的替换  
+
+### 22 col
+将[TAB]键替换成空格键  
+
+### 23 join
+处理两个文件中的数据，类似sql的join，相同值才会连在一起，但在这里，要注意排序，如果排序不同，导致同一行的数据值不同，压根不上，所以maybe you need sort first.  
+
+### 24 paste
+与jion不同，它不需要对比，是直接A file 的行数据拼接上B file的行数据，中间以[Tab]键隔开。  
+
+### 25 expand
+将[tab]键转换成空格键  
+
+### 26 split
+将文件拆分，可根据文件size ，也可根据行数去将一整份文件，拆成小文件。  
+
