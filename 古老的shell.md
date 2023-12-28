@@ -305,8 +305,12 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 ![image](https://github.com/786788808/Linux-and-shell/assets/32427537/2e2ea618-eda4-4352-b3df-584936e46188)   
 
 ### 19 wc
-
+- `wc -l`：查询行数，比如查询hush_demo.txt有多少行, `wc -l ./hush_demo.txt`  
+- `wc -w`:
+- `wc -m`:
+  
 ### 20 tee 双重定向
+同时将数据流分送到文件与屏幕(stdout)
 
 ### 21 tr
 可以用来删除一段信息中的文字，或者进行文字信息的替换  
@@ -319,7 +323,9 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 
 ### 24 paste
 与jion不同，它不需要对比，是直接A file 的行数据拼接上B file的行数据，中间以[Tab]键隔开。  
-
+- `paste fileA fileB`:  
+- `paste -d ' ' fileA fileB`:  
+  
 ### 25 expand
 将[tab]键转换成空格键  
 
