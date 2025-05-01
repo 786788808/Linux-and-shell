@@ -335,3 +335,13 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 ### 26 split
 将文件拆分，可根据文件size ，也可根据行数去将一整份文件，拆成小文件。  
 
+### 27 find
+指定名字找文件 -name, 可以加上模糊匹配查找     
+指定文件大小找文件 -size, 支持使用 + 或 - 表示大于或小于指定大小, 单位可以是 c（字节）、w（字数）、b（块数）、k（KB）、M（MB）或 G（GB）    
+指定文件所有者查找 -user  
+按文件类型查找 -type type, 可以是 f（普通文件）、d（目录）、l（符号链接）等   
+还可以按照文件最后修改时间、文件被访问最后时间、状态发生过改变等等来查找  
+`find /home/hush -name "*.txt"`, 找 /tmp 下文件所有者是 hush 的 txt 文件    
+`find /tmp -user hush`, 找 /tmp 下文件所有者是 hush 的文件  
+`find /tmp -size +2M`, 找 /tmp 下大于 2M 的文件    
+`find /tmp -type d`, 找 /tmp 下的目录   
