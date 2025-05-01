@@ -345,3 +345,13 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 `find /tmp -user hush`, 找 /tmp 下文件所有者是 hush 的文件  
 `find /tmp -size +2M`, 找 /tmp 下大于 2M 的文件    
 `find /tmp -type d`, 找 /tmp 下的目录   
+
+### 28 locate 定位文件所在位置
+locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文件路径, 首先要更新背后的数据库,`updatedb` (要有权限才行)     
+然后定位 file 位置, `locate aa.txt`       
+![](https://s3.bmp.ovh/imgs/2025/05/01/f9316aa1d4f60ec6.png)    
+
+### 29 which 定位二进制文件位置
+查看指令"bash"的绝对路径，`which bash`   
+查看指令"which"的绝对路径，`which which`    
+![](https://s3.bmp.ovh/imgs/2025/05/01/5391a54b9c261d29.png)  
