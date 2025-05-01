@@ -277,10 +277,12 @@ shell 是弱类型语言，所以看到上面的height有数值也有字符串�
 -i: 忽略大小写  
 -n: 输出的同时显示行号  
 -v: 反向选择，显示没有'查找字符'的那一行  
-`last | grep 'hush'`    
-`last | grep -v 'hush'`    
+`last | grep 'hush' | less`    
+`last | grep -v 'hush' | less`    
 `last | grep -nv `hush'`  
 `last | grep -vc 'hush'`   
+`history | grep -i "VIM"`
+`history | grep -in "VIM"`
 
 ### 17.sort
 `sort [-fbMnrtuk] [file or stdin]`  
