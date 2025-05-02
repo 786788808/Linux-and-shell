@@ -381,3 +381,6 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 ![](https://s3.bmp.ovh/imgs/2025/05/02/c047cb887190c769.png)  
 `lsblk -f`  
 ![](https://s3.bmp.ovh/imgs/2025/05/02/c5c00d572a1c3009.png)  
+
+### 33 du -h 查询指定目录的磁盘占用情况
+
