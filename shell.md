@@ -375,3 +375,9 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 如果要删除这些定时任务，根据任务编号删除即可，比如我要删除编号为 5 的定时任务，删除它，执行`atrm 5`    
 ![](https://s3.bmp.ovh/imgs/2025/05/02/d5ef0ae7181c2a50.png)  
 其他参数自行查，这里粗略带过
+
+### 32 lsblk 查看所有设备挂载情况
+`lsblk`  
+![](https://s3.bmp.ovh/imgs/2025/05/02/c047cb887190c769.png)  
+`lsblk -f`  
+![](https://s3.bmp.ovh/imgs/2025/05/02/c5c00d572a1c3009.png)  
