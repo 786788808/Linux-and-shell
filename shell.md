@@ -357,3 +357,16 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 查看指令"bash"的绝对路径，`which bash`   
 查看指令"which"的绝对路径，`which which`    
 ![](https://s3.bmp.ovh/imgs/2025/05/01/5391a54b9c261d29.png)  
+
+### 30 crontab 设置定时任务
+`crontab -e`, 然后输入要设置的任务，比如`*/1 5 25 12 * echo `date` >> /tmp/test_crontab.txt`, 在每年 12 月 25 日凌晨 5 点的时候，每隔开 1 分钟，都会去输出 date 的 information 到 /tmp/test_crontab.txt 里面  
+`crontab -l`, 查看有什么定时任务  
+`crontab -r`, 把所有的定时任务都清掉   
+
+### 31 at 一次性定时计划任务
+使用 at 命令的时候，一定要保证 atd 进程的启动，执行`ps -ef | grep atd` 查询即可。下图看到有 atd 进程      
+![](https://s3.bmp.ovh/imgs/2025/05/02/bfd4eb7d6870de69.png)   
+比如，2 分钟之后要 ls 查看一下有什么文件，并把结果输出到 /tmp/tmp_at.txt, 执行 `at now + 2 minutes`, `ls > /tmp/tmp_at.txt`, 连续按`ctrl + d` 2 次退出  
+![](https://s3.bmp.ovh/imgs/2025/05/02/6ba7ec66f73debe1.png)   
+比如，2 天之后 5 点钟要查看一下 date 信息，并把结果输出到 /tmp/tmp_at2.txt, 执行 `at 5pm + 2 days`, `date > /tmp/tmp_at2.txt`, 连续按`ctrl + d` 2 次退出  
+其他参数自行查，这里粗略带过
