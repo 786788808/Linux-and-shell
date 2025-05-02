@@ -369,4 +369,7 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 比如，2 分钟之后要 ls 查看一下有什么文件，并把结果输出到 /tmp/tmp_at.txt, 执行 `at now + 2 minutes`, `ls > /tmp/tmp_at.txt`, 连续按`ctrl + d` 2 次退出  
 ![](https://s3.bmp.ovh/imgs/2025/05/02/6ba7ec66f73debe1.png)   
 比如，2 天之后 5 点钟要查看一下 date 信息，并把结果输出到 /tmp/tmp_at2.txt, 执行 `at 5pm + 2 days`, `date > /tmp/tmp_at2.txt`, 连续按`ctrl + d` 2 次退出  
+![](https://s3.bmp.ovh/imgs/2025/05/02/214b450d219b90b8.png)    
+查看一下未来的任务 `atq`
+![](https://s3.bmp.ovh/imgs/2025/05/02/e481a2f47ac4903b.png)  
 其他参数自行查，这里粗略带过
