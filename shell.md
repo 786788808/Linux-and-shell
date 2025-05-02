@@ -370,6 +370,8 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 ![](https://s3.bmp.ovh/imgs/2025/05/02/6ba7ec66f73debe1.png)   
 比如，2 天之后 5 点钟要查看一下 date 信息，并把结果输出到 /tmp/tmp_at2.txt, 执行 `at 5pm + 2 days`, `date > /tmp/tmp_at2.txt`, 连续按`ctrl + d` 2 次退出  
 ![](https://s3.bmp.ovh/imgs/2025/05/02/214b450d219b90b8.png)    
-查看一下未来的任务 `atq`
-![](https://s3.bmp.ovh/imgs/2025/05/02/e481a2f47ac4903b.png)  
+查看一下未来的任务 `atq`, 任务执行完，就不会出现在这个 list 里面
+![](https://s3.bmp.ovh/imgs/2025/05/02/e481a2f47ac4903b.png)    
+如果要删除这些定时任务，根据任务编号删除即可，比如我要删除编号为 5 的定时任务，删除它，执行`atrm 5`    
+![](https://s3.bmp.ovh/imgs/2025/05/02/d5ef0ae7181c2a50.png)  
 其他参数自行查，这里粗略带过
