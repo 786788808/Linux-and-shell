@@ -5,8 +5,6 @@
 [参考文档3](http://manual.51yip.com/shell/)
 
 ### 1.什么是shell
-刚开始接触shell的时候，只知道shell脚本扩展名为 sh，其脚本还带有linux命令……  
-慢慢……知道了一点东西  
 shell，直译外壳，它是操作系统的外壳。我们可以通过shell命令来操作和控制操作系统。可理解成，Shell是一个命令解释器，它通过接受用户输入的Shell命令来启动、暂停、停止程序的运行或对计算机进行控制。  
 说人话一点，可以把shell比喻成一个翻译官，我写了人类能看懂的脚本（ABCDEFG……），想要计算机去帮我干活，但是计算机它只懂机器语言（0101010101），在这种鸡同鸭讲的情况下，于是请来了shell来当翻译官，将人类的指令翻译成机器能识别的语言，然后让机器去干活。  
 不过，我们常说的shell指的是shell script，而不是开发shell本身这意思。    
@@ -382,5 +380,36 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 `lsblk -f`  
 ![](https://s3.bmp.ovh/imgs/2025/05/02/c5c00d572a1c3009.png)  
 
-### 33 du -h 查询指定目录的磁盘占用情况
+### 33 df -h 查询指定目录的磁盘占用情况
+`df -h`, 查询系统整体磁盘使用情况  
+![](https://s3.bmp.ovh/imgs/2025/05/03/3795eb091f86461b.png)
 
+### 34 du -h 查询指定目录的磁盘占用情况
+不添加目录，默认为查询当前目录的磁盘占用情况。添加目录，会去查询指定目录的磁盘占用情况       
+`-s`,指定目录占用大小汇总    
+`-h`,带计量单位，M G 等    
+`-a`,含文件      
+![](https://s3.bmp.ovh/imgs/2025/05/03/a508621b4f4b5876.png)    
+`-max-depth=1`,子目录深度    
+![](https://s3.bmp.ovh/imgs/2025/05/03/fd7cc02ad93e61bf.png)    
+`-c`,列出明细的同时，增加汇总值    
+![](https://s3.bmp.ovh/imgs/2025/05/03/36968320bb736b2f.png)    
+
+### 35 统计特定目录下文件的个数
+比如要统计 /tmp/tmp_custom/test 的文件数量，`ls -l /tmp/tmp_custom/test | grep "^-" | wc -l`     
+![](https://s3.bmp.ovh/imgs/2025/05/03/ea6884c64599d628.png)      
+![](https://s3.bmp.ovh/imgs/2025/05/03/6f6bbf51d5178bc9.png)    
+
+### 36 统计特定目录下目录的个数
+`ls -l /tmp/tmp_custom/test | grep "^d" | wc -l`  
+![](https://s3.bmp.ovh/imgs/2025/05/03/4b80e6ef981764e1.png)    
+`ls -l | grep "^d" | wc -l`     
+![](https://s3.bmp.ovh/imgs/2025/05/03/27fbecedd229ec74.png)  
+
+### 37 统计特定目录下文件的个数，包括子目录的
+`ls -lR | grep "^-" | wc -l`  
+![](https://s3.bmp.ovh/imgs/2025/05/03/14d86a854c9f0488.png)   
+
+### 36 统计特定目录下目录的个数，包括子目录的
+`ls -lR | grep "^d" | wc -l`  
+![](https://s3.bmp.ovh/imgs/2025/05/03/ab799004467bf5f9.png)    
