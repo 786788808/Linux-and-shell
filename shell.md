@@ -430,3 +430,6 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 设置永久挂载，修改 /etc/fstab，添加后，执行 `mount -a` 即刻生效    
 `cat /etc/fstab`  
 ![image](https://imgur.la/images/2025/05/03/image32e2c9af48905f7e.png)  
+
+### 39 NAT 网络配置
+![image](https://imgur.la/images/2025/05/03/image13a83430e60eb6fe.png)  
