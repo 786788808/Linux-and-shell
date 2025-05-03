@@ -433,3 +433,20 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 
 ### 39 NAT 网络配置
 ![image](https://imgur.la/images/2025/05/03/image13a83430e60eb6fe.png)  
+
+### 40 查看、修改 hostname
+`hostname`  
+![image](https://imgur.la/images/2025/05/04/image0b997f2d0ab69936.png)      
+`vim /etc/hostname`, 修改完之后要 `reboot`  
+![image](https://imgur.la/images/2025/05/04/image615bb26330d8db38.png)  
+![image](https://imgur.la/images/2025/05/04/image31322d1c355fc247.png)     
+![image](https://imgur.la/images/2025/05/04/imagea5c362d26041806f.png)    
+重启过后，可以看到 `hostname` 的变化  
+![image](https://imgur.la/images/2025/05/04/imagee3c08478eb4f49b8.png)  
+
+### 41 设置主机名和 hosts 映射
+
+
+
+网络
+![image](https://imgur.la/images/2025/05/04/image89ebab656f12b4f7.png)  
