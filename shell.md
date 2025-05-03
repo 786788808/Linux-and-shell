@@ -413,3 +413,20 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 ### 36 统计特定目录下目录的个数，包括子目录的
 `ls -lR | grep "^d" | wc -l`  
 ![](https://s3.bmp.ovh/imgs/2025/05/03/ab799004467bf5f9.png)    
+
+### 37 以树状显示目录结构
+`tree ./`  
+![image](https://imgur.la/images/2025/05/03/image40414ef28958d1da.png)  
+
+### 38 增加一块硬盘
+假设有 sda，现在加第 2 块
+虚拟机添加硬盘   
+分区 fdisk /dev/sdb  
+![image](https://imgur.la/images/2025/05/03/imagef4d6e137e950f0cc.png)  
+格式化  
+![image](https://imgur.la/images/2025/05/03/image897afd6544337ae1.png)  
+挂载（用命令行挂载后，重启后会失效）    
+![image](https://imgur.la/images/2025/05/03/image9ae7d2d3c26ee9ae.png)  
+设置永久挂载，修改 /etc/fstab，添加后，执行 `mount -a` 即刻生效    
+`cat /etc/fstab`  
+![image](https://imgur.la/images/2025/05/03/image32e2c9af48905f7e.png)  
