@@ -503,6 +503,13 @@ NAT 设置里也要改
 ![image](https://github.com/user-attachments/assets/a3678c20-c20b-4fe1-824e-804a4926abc6)  
 ![image](https://imgur.la/images/2025/05/04/image39496d907716312b.png)    
 
-
+如果换成 linux 去 ping Windows 主机，
+ping IP，需要关闭防火墙  
+![image](https://imgur.la/images/2025/05/04/image9c44dbfdf2adca1c.png)     
+关闭后，即可看到 ping 通了  
+![image](https://imgur.la/images/2025/05/04/imageeb7fdbbf11b59331.png)      
+ping hostname, 修改一下 host file: /etc/hosts    
+加入 IP hostname，再 ping 一下即可  
+![image](https://imgur.la/images/2025/05/04/image0c2ddd811d6d612d.png)      
 
 
