@@ -432,8 +432,21 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 ![image](https://imgur.la/images/2025/05/03/image32e2c9af48905f7e.png)  
 
 ### 39 NAT 网络配置
+他人参考图： 
+#### Linux 网络配置相关信息
 ![image](https://imgur.la/images/2025/05/03/image13a83430e60eb6fe.png)  
-
+自身  
+![](https://s3.bmp.ovh/imgs/2025/05/04/a6ae13057b24cae2.png)    
+IP: 192.168.163.128, 为什么是 192.168.163 开头，可查编辑，虚拟网络编辑器配置    
+![image](https://imgur.la/images/2025/05/04/imagec3a968c5b3139c46.png)      
+NAT 设置：  
+![image](https://imgur.la/images/2025/05/04/image42aa47867001f476.png)  
+网关：192.168.163.2  
+#### Windows 网络配置相关信息
+CMD里`ipconfig` 查 IP：  
+![image](https://imgur.la/images/2025/05/04/image184a4a17b4fd34b6.png)    
+图形界面查看：  
+![image](https://imgur.la/images/2025/05/04/image9da4e82087b94677.png)  
 ### 40 查看、修改 hostname
 `hostname`  
 ![image](https://imgur.la/images/2025/05/04/image0b997f2d0ab69936.png)      
@@ -444,9 +457,44 @@ locate 基于预建数据库（如 /var/lib/mlocate/mlocate.db）快速匹配文
 重启过后，可以看到 `hostname` 的变化  
 ![image](https://imgur.la/images/2025/05/04/imagee3c08478eb4f49b8.png)  
 
-### 41 设置主机名和 hosts 映射
-
-
-
-网络
+### 41 获取 IP
+#### 自动获取
 ![image](https://imgur.la/images/2025/05/04/image89ebab656f12b4f7.png)  
+linux 启动后会自动获取 IP, 缺点是每次自动获取的 IP 地址可能不一样，服务器不可这样设置，需要固定 IP      
+![](https://s3.bmp.ovh/imgs/2025/05/04/271c8b7199158c5d.png)  
+
+#### 指定 IP
+修改配置文件来固定 IP，编辑 `vim /etc/sysconfig/network-scripts/ifcfg-ens160`（网卡的配置文件​​）, 使得 IP 地址变为静态的   
+打开文件，可看到定义网卡 ens160 的网络参数（如 IP 地址、子网掩码、网关等），控制其启动方式、协议支持等  
+先备份，再修改，`cat /etc/sysconfig/network-scripts/ifcfg-ens160 > /etc/sysconfig/network-scripts/ifcfg-ens160_bak_20250504`  
+
+现在查自己的 IP 为 192.168.163.128, 假设，现在要将 IP 设置为 192.168.200.130，   
+BOOTPROTO=static, dhcp 就是自动分配，static 是固定 IP  
+IPADDR=192.168.200.130  
+GATEWAY=192.168.200.2  
+DNS1=192.168.200.2, 保存    
+![](https://s3.bmp.ovh/imgs/2025/05/04/a61cfec591b795c2.png)  
+然后，回到 VMware， 编辑，虚拟网络编辑器配置    
+将子网 IP 192.168.163.2  改成 192.168.200.2 
+![](https://s3.bmp.ovh/imgs/2025/05/04/206e77b9efbb7832.png)  
+NAT 设置里也要改  
+![](https://s3.bmp.ovh/imgs/2025/05/04/dcf79d3917a07fa0.png)  
+确定，确定  
+这时候可以看到xshell 也退出来了   
+![](https://s3.bmp.ovh/imgs/2025/05/04/df5b0e172c877cb8.png)   
+然后需要重启网络服务或者重启系统生效    
+`service network restart`、 `reboot`  
+重启后再次查询 IP, 可以看到 IP 已经变成了 192.168.200.130：  
+![](https://s3.bmp.ovh/imgs/2025/05/04/25df36bbaa5e59a4.png)      
+再看 `ipconfig`, IP 也已经变成了 192.168.200.130:  
+![image](https://imgur.la/images/2025/05/04/image5b0be2bfb4188eac.png)  
+试下通信 `ping 192.168.200.130`:
+![image](https://imgur.la/images/2025/05/04/imagefe5ab16977f9659d.png)  
+看到是 OK 的  
+
+### 42 设置主机名和 hosts 映射
+需要去修改 hosts 文件，C:\Windows\System32\drivers\etc\hosts  
+看到 ping IP 是成功的，但是 ping hostname 是失败的，需要配置
+![](https://s3.bmp.ovh/imgs/2025/05/04/271c8b7199158c5d.png)    
+
+
