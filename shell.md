@@ -512,4 +512,13 @@ ping hostname, 修改一下 host file: /etc/hosts
 加入 IP hostname，再 ping 一下即可  
 ![image](https://imgur.la/images/2025/05/04/image0c2ddd811d6d612d.png)      
 
+## Hosts 是什么
+一个文本文件，用来记录 IP 和 Hostname（主机名）的映射关系  
 
+## DNS
+全称 Domain Name System, 域名系统  
+是互联网上作为域名和 IP 地址相互映射的一个分布数据库  
+在 CMD 输入 `ipconfig /displaydns`，可以查到 DNS 域名解析缓存    
+`ipconfig /flushdns`，可以手动清理 DNS 缓存    
+![image](https://imgur.la/images/2025/05/04/imagee9f7e37059261457.png)    
+related 网络攻击，域名劫持  
